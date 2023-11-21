@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "JobCreate";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+@model JoblistModels
+<div class="  m-5 p-2  bg-transparent">
+    
+   
+    @using(Html.BeginForm("JobCreate","Home",FormMethod.Post))
+    {
+    <input asp-for="JobListName" class="form-control m-auto  " placeholder="İş Listesi Adı" />
+    <button class="btn btn-success form-control">Ekle</button>
+    }
+     
+</div>
