@@ -1,12 +1,8 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Work Management</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -27,13 +23,13 @@
             padding-top: 20px;
         }
 
-            .sidebar a {
-                padding: 10px;
-                text-decoration: none;
-                font-size: 18px;
-                color: white;
-                display: block;
-            }
+        .sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
 
         .button-row {
             margin-left: 260px;
@@ -51,46 +47,60 @@
         }
 
         .frame {
-            margin-left: 260px;
-            background-color: black;
-            margin-top: 15px;
+            margin: 15px;
         }
 
-            .frame button {
-                display: block;
-                width: 100%;
-                margin: 10px 0;
-                color: white;
+        .frame button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            color: white;
+        }
+
+         media (max-width: 768px) {
+            .sidebar {
+                display: none;
             }
 
+            .frame {
+                margin-left: 0;
+            }
+
+            .button-row {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1 class="text-white text-center">WorkManagement</h1>
-
-    <div class="sidebar">
-        <a href="#" class="btn bg-secondary m-2">Günüm</a>
-        <a href="#" class="btn bg-secondary m-2">Planlanan</a>
-        <a href="#" class="btn bg-secondary m-2"> Görevler</a>
-        <a href="#" class="btn bg-secondary m-2"> Tamamlanan Görevler</a>
-        <a href="WorkList" class="btn bg-secondary m-2"> İş Listeleri </a>
-        <a href="JobCreate" class="btn bg-secondary m-2">İş Listesi Oluştur</a>
-        <!-- İhtiyaca göre daha fazla menü öğesi eklenebilir -->
-    </div>
-
-
-
-
-
-
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <a class="navbar-brand" href="#">WorkManagement</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                 
+                
+           
+                <a asp-controller="Home" asp-action="Day" class="nav-item nav-link">Günüm</a>
+                <a asp-controller="Home" asp-action="Planned" class="nav-item nav-link">Planlanan</a>
+                <a asp-controller="Home" asp-action="Tasks" class="nav-item nav-link">Görevler</a>
+                <a asp-controller="Home" asp-action="Completed_Tasks" class="nav-item nav-link">Tamamlanan Görevler</a>
+                <a asp-controller="Home" asp-action="worklist" class="nav-item nav-link">İş Listeleri</a>
+                <a asp-controller="Home" asp-action="JobCreate" class="nav-item nav-link">İş Listesi Oluştur</a>
+              
+                
+                 
+            </div>
+        </div>
+    </nav>
 
     <div class="frame">
        @RenderBody()
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>

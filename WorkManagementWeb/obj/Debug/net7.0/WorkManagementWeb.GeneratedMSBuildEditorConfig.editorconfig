@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\samed\source\repos\WorkManagementWeb\WorkManagementWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/Completed_Tasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wbGV0ZWRfVGFza3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/Day.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKb2JDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/Planned.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGFubmVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/Sonuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb251Yy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/Tasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/samed/source/repos/WorkManagementWeb/WorkManagementWeb/Views/Home/WorkList.cshtml]

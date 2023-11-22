@@ -52,10 +52,27 @@ namespace WorkManagementWeb.Controllers
         {
             ViewBag.Mesaj = $"İş Listesi oluşturuldu: {id}";
             return View();
+
+
+
         }
         
-        
-       
+        public IActionResult Day()
+        {
+            return View();
+        } 
+        public IActionResult Planned() 
+        {
+            return View();
+        }
+        public IActionResult Completed_Tasks()
+        {
+            return View();
+        }
+        public IActionResult Tasks() 
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
