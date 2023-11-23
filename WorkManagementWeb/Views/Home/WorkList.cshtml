@@ -1,21 +1,17 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "WorkList";
     Layout = "~/Views/Template/Template.cshtml";
 }
 
 @model List<WorkManagementWeb.Models.JoblistModels>
 
-
-
 <ul class="list-unstyled">
     @foreach (var item in Model)
     {
-
         <li class="mt-4 d-flex justify-content-center">
-            @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID }, new { @class = "btn btn-primary w-50 text-center" })
+            @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID }, new { @class = "btn bg-primary w-50 text-center text-white" })
+
+            @Html.ActionLink("Güncelle", "Upgrade", new { id = item.ID }, new { @class = "btn bg-danger w-10 text-center ml-2 text-white" })
         </li>
     }
 </ul>
-
-

@@ -56,7 +56,20 @@ namespace WorkManagementWeb.Controllers
 
 
         }
-        
+        [HttpGet]
+        public IActionResult Upgrade(int id) 
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Upgrade(int id,string Name)
+        {
+
+            return View();
+        }
+
+
         public IActionResult Day()
         {
             return View();
