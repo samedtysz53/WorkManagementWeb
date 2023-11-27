@@ -1,16 +1,14 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "WorkList";
     Layout = "~/Views/Template/Template.cshtml";
 }
 
 @model List<WorkManagementWeb.Models.JoblistModels>
 
-
-
 <ul class="list-unstyled">
     @if (Model != null)
     {
+<<<<<<< HEAD
         @foreach (var item in Model)
         {
             <li class="mt-4 d-flex justify-content-center">
@@ -21,7 +19,12 @@
     }else
     {
         
+=======
+        <li class="mt-4 d-flex justify-content-center">
+            @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID }, new { @class = "btn bg-primary w-50 text-center text-white" })
+
+            @Html.ActionLink("Güncelle", "Upgrade", new { id = item.ID }, new { @class = "btn bg-danger w-10 text-center ml-2 text-white" })
+        </li>
+>>>>>>> feaa774b348c5b6fe9028e1a07190a9385b355f1
     }
 </ul>
-
-

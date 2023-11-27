@@ -106,8 +106,25 @@ namespace WorkManagementWeb.Controllers
             ViewBag.Mesaj = $"İş Listesi oluşturuldu: {id}";
             return View();
         }
+<<<<<<< HEAD
 
         // Diğer sayfalara yönlendirme işlemleri
+=======
+        [HttpGet]
+        public IActionResult Upgrade(int id) 
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Upgrade(int id,string Name)
+        {
+
+            return View();
+        }
+
+
+>>>>>>> feaa774b348c5b6fe9028e1a07190a9385b355f1
         public IActionResult Day()
         {
             return View();
