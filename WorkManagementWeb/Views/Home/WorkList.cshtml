@@ -9,12 +9,18 @@
 
 
 <ul class="list-unstyled">
-    @foreach (var item in Model)
+    @if (Model != null)
     {
+        @foreach (var item in Model)
+        {
+            <li class="mt-4 d-flex justify-content-center">
+                @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.JobListName }, new { @class = "btn btn-primary w-50 text-center" })
+            </li>
+        }
 
-        <li class="mt-4 d-flex justify-content-center">
-            @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID }, new { @class = "btn btn-primary w-50 text-center" })
-        </li>
+    }else
+    {
+        
     }
 </ul>
 
