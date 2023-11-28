@@ -12116,11 +12116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagement\\WorkManagementWeb\\WorkManagementWeb\\WorkManagementWeb.csproj",
+      "projectUniqueName": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagementWeb\\WorkManagementWeb\\WorkManagementWeb.csproj",
       "projectName": "WorkManagementWeb",
-      "projectPath": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagement\\WorkManagementWeb\\WorkManagementWeb\\WorkManagementWeb.csproj",
+      "projectPath": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagementWeb\\WorkManagementWeb\\WorkManagementWeb.csproj",
       "packagesPath": "C:\\Users\\samed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagement\\WorkManagementWeb\\WorkManagementWeb\\obj\\",
+      "outputPath": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagementWeb\\WorkManagementWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -12210,7 +12210,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   },

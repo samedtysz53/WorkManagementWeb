@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "WorkList";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+@model List<WorkManagementWeb.Models.JoblistModels>
+
+
+
+<ul class="list-unstyled">
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <li class="mt-4 d-flex justify-content-center">
+                @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.JobListName }, new { @class = "btn btn-primary w-50 text-center" })
+            </li>
+        }
+
+    }
+    else
+    {
+
+    }
+</ul>
+
+
