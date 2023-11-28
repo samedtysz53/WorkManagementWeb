@@ -32,8 +32,8 @@ namespace WorkManagementWeb.Models
             var data = joblistModels1;
 
             // Firebase'e yeni veri ekleme
-            PushResponse response = client.Push(joblistModels1.JobListName, data);
-            data.JobListName = response.Result.name;
+            PushResponse response = client.Push(joblistModels1.JobListName,"");
+            //data.JobListName = response.Result.name;
             //SetResponse setResponse = client.Set("/" + data.JobListName, data);
         }
         public List<JoblistModels> GetJoblist() 
