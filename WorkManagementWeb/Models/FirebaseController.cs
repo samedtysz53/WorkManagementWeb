@@ -32,7 +32,7 @@ namespace WorkManagementWeb.Models
             var data = joblistModels1;
 
             // Firebase'e yeni veri ekleme
-            PushResponse response = client.Push(joblistModels1.JobListName,"");
+            PushResponse response = client.Push("Samed/Joblist", data);
             //data.JobListName = response.Result.name;
             //SetResponse setResponse = client.Set("/" + data.JobListName, data);
         }
@@ -41,7 +41,7 @@ namespace WorkManagementWeb.Models
             client = new FireSharp.FirebaseClient(config);
 
             // Firebase Realtime Database'den veri çekme
-            FirebaseResponse response = client.Get("Joblist");
+            FirebaseResponse response = client.Get("Samed/Joblist");
             dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
 
             // Veriyi işleme

@@ -779,3 +779,6 @@ C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\ne
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.pdb
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.genruntimeconfig.cache
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\ref\WorkManagementWeb.dll
+C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.sourcelink.json
+C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Firebase.Auth.dll
+C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.ServiceModel.dll

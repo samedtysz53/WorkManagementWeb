@@ -19,15 +19,11 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Giriş Formu</h4>
+                        <h4>Kayıt Formu</h4>
                     </div>
-                    <div class="card-header">
-                        <h4> @ViewBag.ErrorMessages</h4>
-                    </div>
-                   
                     <div class="card-body">
 
-                        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                        @using (Html.BeginForm("register", "Home", FormMethod.Post))
                         {
                             <div class="mb-3">
                                 <label for="Email" class="form-label">E-posta</label>

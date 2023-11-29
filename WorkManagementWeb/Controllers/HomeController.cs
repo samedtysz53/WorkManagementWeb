@@ -1,102 +1,87 @@
-﻿ 
+﻿
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 using WorkManagementWeb.Models;
- 
-using FireSharp.Interfaces;
-using FireSharp.Config;
-using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
+using Firebase.Auth;
 namespace WorkManagementWeb.Controllers
 {
     public class HomeController : Controller
     {
+        FirebaseAuthProvider auth;
         private readonly ILogger<HomeController> _logger;
-        private readonly DbContexts _dbContext;
+      
+     
 
         // Firebase yapılandırma bilgileri
         
 
         // HomeController'ın constructor'ı
-        public HomeController(ILogger<HomeController> logger, DbContexts dbContext)
+        public HomeController(ILogger<HomeController> logger)
         {
+            auth = new FirebaseAuthProvider(
+                        new FirebaseConfig("AIzaSyDaJnKoz9qgdOqK06ewVQbo2HIsKwLxbGc"));
             _logger = logger;
-            _dbContext = dbContext;
+             
         }
 
+        [HttpGet]
         // Ana sayfaya yönlendirme işlemi
         public IActionResult Index()
         {
-            return RedirectToAction("WorkList","Main");
-        }
-
-        // Joblist oluşturma sayfasına yönlendirme işlemi
-        [HttpGet]
-        public IActionResult JobCreate()
-        {
+            //return RedirectToAction("WorkList","Main");
             return View();
         }
 
-     
         [HttpPost]
-        public async Task<IActionResult> JobCreateAsync(JoblistModels joblistModels)
+        public async Task<IActionResult> Index(UserProfile userModel)
         {
-            
+            //log in the user
+            try
+            {
+                var fbAuthLink = await auth
+                                .SignInWithEmailAndPasswordAsync(userModel.Email, userModel.Password);
+                string token = fbAuthLink.FirebaseToken;
+                //saving the token in a session variable
+                if (token != null)
+                {
+                    HttpContext.Session.SetString("_UserToken", token);
 
-            return RedirectToAction("WorkList");
+                    return RedirectToAction("worklist", "Main");
+                }
+                else
+                {
+                    return View();
+                }
+            }catch(Exception e) { ViewBag.ErrorMessages = "Kullanıcı adı veya şifre hatalı"; return View(); }
         }
-
-        // Joblist listeleme sayfasına yönlendirme işlemi
-         
-       
-
-        // İş sonucu sayfasını gösterme işlemi
-        [HttpGet]
-        public IActionResult Sonuc(int id)
+        public IActionResult Register()
         {
-            ViewBag.Mesaj = $"İş Listesi oluşturuldu: {id}";
-            return View();
-        }
- 
-
-        // Diğer sayfalara yönlendirme işlemleri
- 
-        [HttpGet]
-        public IActionResult Upgrade(int id) 
-        {
-
             return View();
         }
         [HttpPost]
-        public IActionResult Upgrade(int id,string Name)
+        public async Task<IActionResult> Register(UserProfile userModel)
         {
+            //create the user
+            await auth.CreateUserWithEmailAndPasswordAsync(userModel.Email, userModel.Password);
+            //log in the new user
+            var fbAuthLink = await auth
+                            .SignInWithEmailAndPasswordAsync(userModel.Email, userModel.Password);
+            string token = fbAuthLink.FirebaseToken;
+            //saving the token in a session variable
+            if (token != null)
+            {
+                HttpContext.Session.SetString("_UserToken", token);
 
-            return View();
-        }
-
-
- 
-        public IActionResult Day()
-        {
-            return View();
-        }
-
-        public IActionResult Planned()
-        {
-            return View();
-        }
-
-        public IActionResult Completed_Tasks()
-        {
-            return View();
-        }
-
-        public IActionResult Tasks()
-        {
-            return View();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         // Hata sayfasını gösterme işlemi

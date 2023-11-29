@@ -6,7 +6,7 @@ namespace WorkManagementWeb.Controllers
     public class MainController : Controller
     {
         FirebaseController firebaseController;
-        public MainController(ILogger<HomeController> logger, DbContexts dbContext) 
+        public MainController(ILogger<HomeController> logger) 
         {
         firebaseController=new FirebaseController();
         }
