@@ -10,5 +10,6 @@ namespace WorkManagementWeb.Models
         public string JobListName { get; set; }
         public DateTime Time { get; set; }
 
+        public string Email { get; set; }
     }
 }

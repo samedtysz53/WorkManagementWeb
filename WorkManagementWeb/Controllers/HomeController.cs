@@ -11,7 +11,7 @@ namespace WorkManagementWeb.Controllers
 {
     public class HomeController : Controller
     {
-        FirebaseAuthProvider auth;
+      
         private readonly ILogger<HomeController> _logger;
       
      
@@ -22,8 +22,6 @@ namespace WorkManagementWeb.Controllers
         // HomeController'ın constructor'ı
         public HomeController(ILogger<HomeController> logger)
         {
-            auth = new FirebaseAuthProvider(
-                        new FirebaseConfig("AIzaSyDaJnKoz9qgdOqK06ewVQbo2HIsKwLxbGc"));
             _logger = logger;
              
         }
@@ -39,24 +37,28 @@ namespace WorkManagementWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(UserProfile userModel)
         {
-            //log in the user
             try
             {
-                var fbAuthLink = await auth
-                                .SignInWithEmailAndPasswordAsync(userModel.Email, userModel.Password);
-                string token = fbAuthLink.FirebaseToken;
-                //saving the token in a session variable
-                if (token != null)
+                FirebaseAuthService firebaseAuthService = new FirebaseAuthService();
+                bool loginresult = await firebaseAuthService.Login(userModel);
+                if (loginresult == true)
                 {
-                    HttpContext.Session.SetString("_UserToken", token);
-
+                    HttpContext.Session.SetString("Email", userModel.Email);
+                    userModel.Email = HttpContext.Session.GetString("Email").ToString();
                     return RedirectToAction("worklist", "Main");
                 }
                 else
                 {
+                    ViewBag.ErrorMessages = "Hatakı şifre veya kullanıcı adı";
                     return View();
                 }
-            }catch(Exception e) { ViewBag.ErrorMessages = "Kullanıcı adı veya şifre hatalı"; return View(); }
+
+            }
+            catch (Exception e) 
+            {
+                ViewBag.ErrorMessages = "Hatakı şifre veya kullanıcı adı";
+                return View(); 
+            }
         }
         public IActionResult Register()
         {
@@ -66,22 +68,7 @@ namespace WorkManagementWeb.Controllers
         public async Task<IActionResult> Register(UserProfile userModel)
         {
             //create the user
-            await auth.CreateUserWithEmailAndPasswordAsync(userModel.Email, userModel.Password);
-            //log in the new user
-            var fbAuthLink = await auth
-                            .SignInWithEmailAndPasswordAsync(userModel.Email, userModel.Password);
-            string token = fbAuthLink.FirebaseToken;
-            //saving the token in a session variable
-            if (token != null)
-            {
-                HttpContext.Session.SetString("_UserToken", token);
-
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return View();
-            }
+            return View();
         }
 
         // Hata sayfasını gösterme işlemi
