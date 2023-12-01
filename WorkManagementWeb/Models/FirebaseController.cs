@@ -21,8 +21,9 @@ namespace WorkManagementWeb.Models
         };
         IFirebaseClient client;
 
-        public async Task CreateJobList(JoblistModels joblistModels) 
+        public async Task CreateJobList(JoblistModels joblistModels, string name) 
         {
+
             JoblistModels joblistModels1 = new JoblistModels();
             joblistModels1.JobListName = joblistModels.JobListName;
             joblistModels1.Time = DateTime.Now;
@@ -30,9 +31,11 @@ namespace WorkManagementWeb.Models
             // Firebase Client oluşturma
             client = new FireSharp.FirebaseClient(config);
             var data = joblistModels1;
-
+            string link = name + "/Joblist";
             // Firebase'e yeni veri ekleme
-            PushResponse response = client.Push("Samed/Joblist", data);
+            PushResponse response = client.Push("Joblist","");
+            
+            
             //data.JobListName = response.Result.name;
             //SetResponse setResponse = client.Set("/" + data.JobListName, data);
         }

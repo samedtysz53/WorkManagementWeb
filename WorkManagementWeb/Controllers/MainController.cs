@@ -27,6 +27,7 @@ namespace WorkManagementWeb.Controllers
         {
             if (SessionControl())
             {
+
                 return View();
             }
             else
@@ -53,6 +54,7 @@ namespace WorkManagementWeb.Controllers
         {
             if (SessionControl())
             {
+                ViewBag.User = HttpContext.Session.GetString("Email");
                 return View();
             }
             else
@@ -66,7 +68,9 @@ namespace WorkManagementWeb.Controllers
 
             if (SessionControl())
             {
-                firebaseController.CreateJobList(joblistModels);
+                string Name = HttpContext.Session.GetString("Email");
+                ViewBag.User = HttpContext.Session.GetString("Email");
+                firebaseController.CreateJobList(joblistModels,Name);
                 return View();
             }
             else
