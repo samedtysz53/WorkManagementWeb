@@ -68,8 +68,9 @@ namespace WorkManagementWeb.Controllers
             taskListModels.Done = true;
             DbContexts.TaskListModels.Add(taskListModels);
             DbContexts.SaveChanges();
-            return View();
+            return RedirectToAction("Sonuc");
         }
+        public IActionResult IMenu() { return PartialView("IMenu"); }
         public IActionResult worklist() 
         {
             if (SessionControl()) 

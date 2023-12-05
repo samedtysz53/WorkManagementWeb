@@ -57,7 +57,7 @@ namespace WorkManagementWeb.Controllers
         {
             dbContexts.User.Add(user);
             dbContexts.SaveChanges();
-            return View();
+            return RedirectToAction("worklist","Main");
         }
 
     }

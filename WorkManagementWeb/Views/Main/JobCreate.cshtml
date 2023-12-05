@@ -1,15 +1,33 @@
-﻿@{
+﻿@model WorkManagementWeb.Models.JoblistModels
+
+@{
     ViewData["Title"] = "JobCreate";
     Layout = "~/Views/Template/Template.cshtml";
 }
-@model JoblistModels
-<div class="  m-5 p-2  bg-transparent">
 
-    @ViewBag.User
-    @using (Html.BeginForm("JobCreate", "Main", FormMethod.Post))
-    {
-        <input asp-for="JobListName" class="form-control m-auto  " placeholder="İş Listesi Adı" />
-        <button class="btn btn-success form-control">Ekle</button>
-    }
+<h1>JobCreate</h1>
 
+<h4>JoblistModels</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="JobCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JobListName"  class="control-label"></label>
+                <input asp-for="JobListName" class="form-control" />
+                <span asp-validation-for="JobListName" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Ekle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
 </div>
+
+<div>
+    <a asp-action="worklist">iş listesi</a>
+</div>
+
+ 

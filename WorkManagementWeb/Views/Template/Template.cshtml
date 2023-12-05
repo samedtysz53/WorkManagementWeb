@@ -1,37 +1,14 @@
-﻿ 
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Work Management</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyDaJnKoz9qgdOqK06ewVQbo2HIsKwLxbGc",
-            authDomain: "workmanagement-8c1ad.firebaseapp.com",
-            projectId: "workmanagement-8c1ad",
-            storageBucket: "workmanagement-8c1ad.appspot.com",
-            messagingSenderId: "915706962706",
-            appId: "1:915706962706:web:1b642d9d52001c313789cb",
-            measurementId: "G-EM9Q1R2K33"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
+    
     <style>
         body {
-            background-color: black;
+            background-color: #f8f9fa; /* Light gray background */
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -43,7 +20,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #111;
+            background-color: #343a40; /* Dark gray sidebar */
             padding-top: 20px;
         }
 
@@ -51,7 +28,7 @@
             padding: 10px;
             text-decoration: none;
             font-size: 18px;
-            color: white;
+            color: #ffffff; /* White text */
             display: block;
         }
 
@@ -65,8 +42,8 @@
         .button {
             flex: 1;
             height: 150px;
-            background-color: purple;
-            color: white;
+            background-color: #6c757d; /* Gray button */
+            color: #ffffff; /* White text */
             margin-right: 15px;
         }
 
@@ -78,10 +55,10 @@
             display: block;
             width: 100%;
             margin: 10px 0;
-            color: white;
+            color: #ffffff; /* White text */
         }
 
-         media (max-width: 768px) {
+        #media (max-width: 768px) {
             .sidebar {
                 display: none;
             }
@@ -94,6 +71,26 @@
                 margin-left: 0;
             }
         }
+
+        .navbar {
+            background-color: #343a40; /* Dark gray navbar */
+        }
+
+        .navbar-brand {
+            color: #ffffff !important; /* White text for brand */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff; /* White color for toggler icon */
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* White text for nav links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #17a2b8 !important; /* Light blue on hover */
+        }
     </style>
 </head>
 <body>
@@ -104,18 +101,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav">
-                 
-                
-                 <a asp-controller="Home" asp-action="Day" class="nav-item nav-link">Günüm</a>
+                <a asp-controller="Home" asp-action="Day" class="nav-item nav-link">Günüm</a>
                 <a asp-controller="Home" asp-action="Planned" class="nav-item nav-link">Planlanan</a>
                 <a asp-controller="Home" asp-action="Tasks" class="nav-item nav-link">Görevler</a>
                 <a asp-controller="Home" asp-action="Completed_Tasks" class="nav-item nav-link">Tamamlanan Görevler</a> 
                 <a asp-controller="Main" asp-action="worklist" class="nav-item nav-link">İş Listeleri</a>
                 <a asp-controller="Main" asp-action="JobCreate" class="nav-item nav-link">İş Listesi Oluştur</a>
                 <a asp-controller="Main" asp-action="CloseD" class="nav-item nav-link">Çıkış yap</a>
-
-
-
             </div>
         </div>
     </nav>

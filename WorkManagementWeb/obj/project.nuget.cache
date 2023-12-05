@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2xrtbCukyRr9k/fd5/q2nMTsqo04NLJCeeScB+qHFRU0Vyri8G/Xxbvn5DUrX65QSgpahEJTgV0oQGTUW+r3pA==",
+  "dgSpecHash": "75OMU8Q1CQZiwtap2olaC6favn9eFQGWsFSxvx/uzWzUP8/i0F2RtQZXPuWJpxyHtcy2HxuTXLhAAJ3pvfwvvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagementWeb\\WorkManagementWeb\\WorkManagementWeb.csproj",
+  "projectFilePath": "C:\\Users\\samed\\Documents\\GitHub\\WorkManagement\\WorkManagementWeb\\WorkManagementWeb\\WorkManagementWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samed\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\samed\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

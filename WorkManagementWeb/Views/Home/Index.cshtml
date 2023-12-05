@@ -38,6 +38,8 @@
                                 @Html.PasswordFor(model => model.Password, new { @class = "form-control", @required = "required" })
                             </div>
                             <button type="submit" class="btn btn-primary">Giriş</button>
+
+                            <a asp-controller="Home" asp-action="register" class="nav-item  btn btn-primary">Kayıt ol</a>
                         }
                     </div>
                 </div>

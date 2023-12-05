@@ -504,17 +504,6 @@ C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementW
 C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.pdb
 C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.genruntimeconfig.cache
 C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\ref\WorkManagementWeb.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Firebase.Database.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.Core.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.Interfaces.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.Linq.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.PlatformServices.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\FireSharp.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Threading.Tasks.Extensions.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Threading.Tasks.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Net.Http.Extensions.dll
-C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Net.Http.Primitives.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\appsettings.json
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\WorkManagementWeb.staticwebassets.runtime.json
@@ -769,3 +758,4 @@ C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\ne
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.genruntimeconfig.cache
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\ref\WorkManagementWeb.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.sourcelink.json
+C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.sourcelink.json

@@ -1,45 +1,66 @@
-﻿
+﻿@model IEnumerable<WorkManagementWeb.Models.TaskListModels>
+
 @{
     ViewData["Title"] = "Sonuc";
     Layout = "~/Views/Template/Template.cshtml";
 }
 
+<h1>Sonuc</h1>
 
-@model List<WorkManagementWeb.Models.TaskListModels>
- 
-<h4 class="text-white">
-    @ViewBag.User
-</h4>
-<ul class="list-unstyled">
-    @using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
-    {
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobListName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Done)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
         @if (Model != null)
         {
             @foreach (var item in Model)
             {
-                <li class="mt-4 d-flex justify-content-center">
-                    @Html.ActionLink(item.TaskName, "Sonuc", new { id = item.ID }, new { @class = "btn btn-primary w-50 text-center" })
-                </li>
-
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TaskName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobListName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Done)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Güncelle</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Bitir</a>
+                    </td>
+                </tr>
             }
-
         }
-        else
-        {
+    </tbody>
+</table>
 
-        }
-    }
-</ul>
- 
-
-<div class="  m-5 p-2  bg-transparent">
-
-
-    @ViewBag.User
-    @using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
-    {
-        <input type="text" id="taskname" name="taskname" class="form-control m-auto  " placeholder="İş Listesi Adı" />
-        <button class="btn btn-success form-control">Ekle</button>
-    }
-
-</div>
+@using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="taskname">İş Adı:</label>
+        <input type="text" id="taskname" name="taskname" class="form-control" placeholder="İş Adı" />
+    </div>
+     
+    
+     
+    <button type="submit" class="btn btn-success">Ekle</button>
+}
