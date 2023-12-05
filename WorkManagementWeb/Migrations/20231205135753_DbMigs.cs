@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WorkManagementWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class DatabaseM : Migration
+    public partial class DbMigs : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,11 +33,26 @@ namespace WorkManagementWeb.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     JobListName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Time = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_JoblistModels", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Log",
+                columns: table => new
+                {
+                    L_ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Log", x => x.L_ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,6 +70,22 @@ namespace WorkManagementWeb.Migrations
                 {
                     table.PrimaryKey("PK_TaskListModels", x => x.ID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "User",
+                columns: table => new
+                {
+                    U_ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User", x => x.U_ID);
+                });
         }
 
         /// <inheritdoc />
@@ -67,7 +98,13 @@ namespace WorkManagementWeb.Migrations
                 name: "JoblistModels");
 
             migrationBuilder.DropTable(
+                name: "Log");
+
+            migrationBuilder.DropTable(
                 name: "TaskListModels");
+
+            migrationBuilder.DropTable(
+                name: "User");
         }
     }
 }

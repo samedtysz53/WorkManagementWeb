@@ -12,8 +12,8 @@ using WorkManagementWeb.Models;
 namespace WorkManagementWeb.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20231121111410_DatabaseM")]
-    partial class DatabaseM
+    [Migration("20231205135753_DbMigs")]
+    partial class DbMigs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,10 @@ namespace WorkManagementWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("JobListName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -68,6 +72,26 @@ namespace WorkManagementWeb.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("JoblistModels");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.Log", b =>
+                {
+                    b.Property<int>("L_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("L_ID"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("L_ID");
+
+                    b.ToTable("Log");
                 });
 
             modelBuilder.Entity("WorkManagementWeb.Models.TaskListModels", b =>
@@ -95,6 +119,34 @@ namespace WorkManagementWeb.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("TaskListModels");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.User", b =>
+                {
+                    b.Property<int>("U_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("U_ID"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("U_ID");
+
+                    b.ToTable("User");
                 });
 #pragma warning restore 612, 618
         }

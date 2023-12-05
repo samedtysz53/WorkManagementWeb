@@ -8,15 +8,11 @@
     ".NETCoreApp,Version=v7.0": {
       "WorkManagementWeb/1.0.0": {
         "dependencies": {
-          "FireSharp": "2.0.4",
-          "Firebase.Auth": "1.0.0",
-          "Firebase.Database": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
           "Microsoft.EntityFrameworkCore.Design": "7.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.14",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.11",
-          "bootstrap": "5.3.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.11"
         },
         "runtime": {
           "WorkManagementWeb.dll": {}
@@ -53,45 +49,6 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.7.0.0",
             "fileVersion": "1.700.22.46903"
-          }
-        }
-      },
-      "bootstrap/5.3.2": {},
-      "Firebase.Auth/1.0.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "13.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Firebase.Database/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.1",
-          "Rx-Main": "2.2.5"
-        },
-        "runtime": {
-          "lib/portable45-net45+win8+wpa81/Firebase.Database.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "FireSharp/2.0.4": {
-        "dependencies": {
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Net.Http": "2.2.28",
-          "Newtonsoft.Json": "13.0.1"
-        },
-        "runtime": {
-          "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {
-            "assemblyVersion": "2.0.3.0",
-            "fileVersion": "2.0.3.0"
           }
         }
       },
@@ -643,30 +600,6 @@
           }
         }
       },
-      "Microsoft.Bcl/1.1.9": {
-        "dependencies": {
-          "Microsoft.Bcl.Build": "1.0.14"
-        }
-      },
-      "Microsoft.Bcl.Async/1.0.168": {
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9"
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {
-            "assemblyVersion": "1.0.168.0",
-            "fileVersion": "1.0.168.0"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {
-            "assemblyVersion": "1.0.12.0",
-            "fileVersion": "1.0.168.0"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.dll": {
-            "assemblyVersion": "1.0.12.0",
-            "fileVersion": "1.0.168.0"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -675,7 +608,6 @@
           }
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
       "Microsoft.Build/17.3.2": {
         "dependencies": {
           "Microsoft.Build.Framework": "17.3.2",
@@ -1429,22 +1361,6 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {
-            "assemblyVersion": "2.2.28.0",
-            "fileVersion": "2.2.28.0"
-          },
-          "lib/net45/System.Net.Http.Primitives.dll": {
-            "assemblyVersion": "4.2.28.0",
-            "fileVersion": "4.2.28.0"
-          }
-        }
-      },
       "Microsoft.NET.StringTools/17.3.2": {
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -1457,27 +1373,8 @@
           }
         }
       },
-      "Microsoft.NETCore.Jit/1.0.2": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
-      "Microsoft.NETCore.Portable.Compatibility/1.0.1": {
-        "dependencies": {
-          "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2"
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.ServiceModel.dll": {
-            "assemblyVersion": "2.0.5.0",
-            "fileVersion": "4.6.24214.0"
-          }
-        }
-      },
-      "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
-        "dependencies": {
-          "Microsoft.NETCore.Jit": "1.0.2",
-          "Microsoft.NETCore.Windows.ApiSets": "1.0.1"
-        }
-      },
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -1814,57 +1711,6 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
-      "Rx-Core/2.2.5": {
-        "dependencies": {
-          "Rx-Interfaces": "2.2.5"
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.Core.dll": {
-            "assemblyVersion": "2.2.5.0",
-            "fileVersion": "2.2.5.40722"
-          }
-        }
-      },
-      "Rx-Interfaces/2.2.5": {
-        "runtime": {
-          "lib/net45/System.Reactive.Interfaces.dll": {
-            "assemblyVersion": "2.2.5.0",
-            "fileVersion": "2.2.5.40722"
-          }
-        }
-      },
-      "Rx-Linq/2.2.5": {
-        "dependencies": {
-          "Rx-Core": "2.2.5",
-          "Rx-Interfaces": "2.2.5"
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.Linq.dll": {
-            "assemblyVersion": "2.2.5.0",
-            "fileVersion": "2.2.5.40722"
-          }
-        }
-      },
-      "Rx-Main/2.2.5": {
-        "dependencies": {
-          "Rx-Core": "2.2.5",
-          "Rx-Interfaces": "2.2.5",
-          "Rx-Linq": "2.2.5",
-          "Rx-PlatformServices": "2.2.5"
-        }
-      },
-      "Rx-PlatformServices/2.2.5": {
-        "dependencies": {
-          "Rx-Core": "2.2.5",
-          "Rx-Interfaces": "2.2.5"
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.PlatformServices.dll": {
-            "assemblyVersion": "2.2.5.0",
-            "fileVersion": "2.2.5.40722"
-          }
-        }
-      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -2671,34 +2517,6 @@
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
     },
-    "bootstrap/5.3.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-m0/GEaLwE35B8P1xScFhwAsQi5o6kWPzOVPdGkoFwv+5YjmbgXFPQai71N5APwRCU52ZO4vHYWJ5DYSqKKgivw==",
-      "path": "bootstrap/5.3.2",
-      "hashPath": "bootstrap.5.3.2.nupkg.sha512"
-    },
-    "Firebase.Auth/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MRAGIRDXqB0jRvtJx0yRmTMjZInQcUSyHN7LuOwxL/nfyceDEA+Gfiimn7HtI2ntHw3hdUAoeeCA6BCc3qg0/A==",
-      "path": "firebase.auth/1.0.0",
-      "hashPath": "firebase.auth.1.0.0.nupkg.sha512"
-    },
-    "Firebase.Database/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nEALT430lPZ86itiPiih9ndGG4ZV0sy5GaoVgzZTx5icqpFk/aHjIwMOpUqn7+Me0bDL6WOQnYlsnQcTD1t84g==",
-      "path": "firebase.database/1.0.0",
-      "hashPath": "firebase.database.1.0.0.nupkg.sha512"
-    },
-    "FireSharp/2.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-laSHpVUBG6iCTUixmpeUmYxie2zbziOBM+LU0v2A0ETE9dUyBA+8aY63xql/o8LXj+kFybBLYUKBUrLCZWaq+A==",
-      "path": "firesharp/2.0.4",
-      "hashPath": "firesharp.2.0.4.nupkg.sha512"
-    },
     "Humanizer/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -3056,33 +2874,12 @@
       "path": "microsoft.aspnetcore.razor.language/6.0.11",
       "hashPath": "microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512"
     },
-    "Microsoft.Bcl/1.1.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-USQ55innJy8K+tAXvVa1O8dUTp2s7pmJ5cJj6Tl02HtGc2xBDj0P2QH5620HbGXIWKWYhydoeQF8Rm/JRDBGhw==",
-      "path": "microsoft.bcl/1.1.9",
-      "hashPath": "microsoft.bcl.1.1.9.nupkg.sha512"
-    },
-    "Microsoft.Bcl.Async/1.0.168": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-tUNC02eBwDKpGre0BcNIvblLv1q0Q3DnS/vtkRHj2FE1sXwt386HAudztyl5C0U88hllrqHDvtlz8bK0Y8cHDA==",
-      "path": "microsoft.bcl.async/1.0.168",
-      "hashPath": "microsoft.bcl.async.1.0.168.nupkg.sha512"
-    },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
       "path": "microsoft.bcl.asyncinterfaces/6.0.0",
       "hashPath": "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512"
-    },
-    "Microsoft.Bcl.Build/1.0.14": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
-      "path": "microsoft.bcl.build/1.0.14",
-      "hashPath": "microsoft.bcl.build.1.0.14.nupkg.sha512"
     },
     "Microsoft.Build/17.3.2": {
       "type": "package",
@@ -3385,26 +3182,12 @@
       "path": "microsoft.identitymodel.tokens/6.24.0",
       "hashPath": "microsoft.identitymodel.tokens.6.24.0.nupkg.sha512"
     },
-    "Microsoft.Net.Http/2.2.28": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-hPL9k+rPIpAj84RZSq3WtJkOD9uMStBovAIAz/0OQ+9hQIwQ2XqQlAhMqI4kw0XDxweJySIqNTMlkhRRuthcPQ==",
-      "path": "microsoft.net.http/2.2.28",
-      "hashPath": "microsoft.net.http.2.2.28.nupkg.sha512"
-    },
     "Microsoft.NET.StringTools/17.3.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3sIZECEDSY9kP7BqPLOSIHLsiqv0TSU5cIGAMung+NrefIooo1tBMVRt598CGz+kUF1xlbOsO8nPAYpgfokx/Q==",
       "path": "microsoft.net.stringtools/17.3.2",
       "hashPath": "microsoft.net.stringtools.17.3.2.nupkg.sha512"
-    },
-    "Microsoft.NETCore.Jit/1.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw==",
-      "path": "microsoft.netcore.jit/1.0.2",
-      "hashPath": "microsoft.netcore.jit.1.0.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -3413,33 +3196,12 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
-    "Microsoft.NETCore.Portable.Compatibility/1.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Vd+lvLcGwvkedxtKn0U8s9uR4p0Lm+0U2QvDsLaw7g4S1W4KfPDbaW+ROhhLCSOx/gMYC72/b+z+o4fqS/oxVg==",
-      "path": "microsoft.netcore.portable.compatibility/1.0.1",
-      "hashPath": "microsoft.netcore.portable.compatibility.1.0.1.nupkg.sha512"
-    },
-    "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-A0x1xtTjYJWZr2DRzgfCOXgB0JkQg8twnmtTJ79wFje+IihlLbXtx6Z2AxyVokBM5ruwTedR6YdCmHk39QJdtQ==",
-      "path": "microsoft.netcore.runtime.coreclr/1.0.2",
-      "hashPath": "microsoft.netcore.runtime.coreclr.1.0.2.nupkg.sha512"
-    },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
-    },
-    "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-SaToCvvsGMxTgtLv/BrFQ5IFMPRE1zpWbnqbpwykJa8W5XiX82CXI6K2o7yf5xS7EP6t/JzFLV0SIDuWpvBZVw==",
-      "path": "microsoft.netcore.windows.apisets/1.0.1",
-      "hashPath": "microsoft.netcore.windows.apisets.1.0.1.nupkg.sha512"
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
@@ -3706,41 +3468,6 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "Rx-Core/2.2.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-DfWVTfW6tvRkkqpnRHKxPIvaRZyDJGADuqrE6J2nwejOQbLRWi0rNUwXkViDWz++25BGDy3iRE5OE6Dv8mJxYQ==",
-      "path": "rx-core/2.2.5",
-      "hashPath": "rx-core.2.2.5.nupkg.sha512"
-    },
-    "Rx-Interfaces/2.2.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-FKtG2QfMIeUcfB7r3a89VoAiszX3DTvYETkpC6U0FzWpxRK/mcHyzYOsniDfag+NsDG0P1k1c8yNSefXKp3t2A==",
-      "path": "rx-interfaces/2.2.5",
-      "hashPath": "rx-interfaces.2.2.5.nupkg.sha512"
-    },
-    "Rx-Linq/2.2.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UTeCIu3cWPExxmTzdiVq7SalqTBhUaomBTaAC9LpYPoAopjlFwA3hjVWXoLkGlDc/44wqJemJuEwFP00KphiFg==",
-      "path": "rx-linq/2.2.5",
-      "hashPath": "rx-linq.2.2.5.nupkg.sha512"
-    },
-    "Rx-Main/2.2.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qdQ6qENEiLsp/LRdzZlLlodihWN8VDjwNfWa8c2ELjEHZgTdKzt1V4i61gkHVtFKZXe8Px6KupbMP3pZ+1tusQ==",
-      "path": "rx-main/2.2.5",
-      "hashPath": "rx-main.2.2.5.nupkg.sha512"
-    },
-    "Rx-PlatformServices/2.2.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pMnNEvJVjT+wuDib+W/bi5hhIYcre7dW5yxvKrJxnR4iKJ1VLA/dY2FTtjDriHGx7OeGn12lQewXlH2oHiWFPA==",
-      "path": "rx-platformservices/2.2.5",
-      "hashPath": "rx-platformservices.2.2.5.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

@@ -4,5 +4,42 @@
     Layout = "~/Views/Template/Template.cshtml";
 }
 
-<h1>Sonuc</h1>
 
+@model List<WorkManagementWeb.Models.TaskListModels>
+ 
+<h4 class="text-white">
+    @ViewBag.User
+</h4>
+<ul class="list-unstyled">
+    @using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
+    {
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <li class="mt-4 d-flex justify-content-center">
+                    @Html.ActionLink(item.TaskName, "Sonuc", new { id = item.ID }, new { @class = "btn btn-primary w-50 text-center" })
+                </li>
+
+            }
+
+        }
+        else
+        {
+
+        }
+    }
+</ul>
+ 
+
+<div class="  m-5 p-2  bg-transparent">
+
+
+    @ViewBag.User
+    @using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
+    {
+        <input type="text" id="taskname" name="taskname" class="form-control m-auto  " placeholder="İş Listesi Adı" />
+        <button class="btn btn-success form-control">Ekle</button>
+    }
+
+</div>

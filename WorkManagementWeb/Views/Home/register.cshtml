@@ -3,7 +3,7 @@
 *@
 @{
 }
-@model UserProfile
+@model User
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,9 +26,14 @@
                         @using (Html.BeginForm("register", "Home", FormMethod.Post))
                         {
                             <div class="mb-3">
+                                <label for="Email" class="form-label">Kullanıcı adı:</label>
+                                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @required = "required" })
+                            </div>
+                            <div class="mb-3">
                                 <label for="Email" class="form-label">E-posta</label>
                                 @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @required = "required" })
                             </div>
+
                             <div class="mb-3">
                                 <label for="Password" class="form-label">Şifre</label>
                                 @Html.PasswordFor(model => model.Password, new { @class = "form-control", @required = "required" })

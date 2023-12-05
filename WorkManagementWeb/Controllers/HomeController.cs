@@ -6,24 +6,25 @@ using System.Diagnostics;
 using WorkManagementWeb.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Firebase.Auth;
+
 namespace WorkManagementWeb.Controllers
 {
     public class HomeController : Controller
     {
-      
+
         private readonly ILogger<HomeController> _logger;
-      
-     
+
+
 
         // Firebase yapılandırma bilgileri
-        
 
+        private readonly DbContexts dbContexts;
         // HomeController'ın constructor'ı
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DbContexts dbContexts)
         {
+            this.dbContexts = dbContexts;
             _logger = logger;
-             
+
         }
 
         [HttpGet]
@@ -33,49 +34,31 @@ namespace WorkManagementWeb.Controllers
             //return RedirectToAction("WorkList","Main");
             return View();
         }
-
         [HttpPost]
-        public async Task<IActionResult> Index(UserProfile userModel)
+        // Ana sayfaya yönlendirme işlemi
+        public IActionResult Index(User user)
         {
-            try
+            //return RedirectToAction("WorkList","Main");
+            var filter = dbContexts.User.FirstOrDefault(x => x.Email == user.Email && x.Password == user.Password);
+            if (filter != null) 
             {
-                FirebaseAuthService firebaseAuthService = new FirebaseAuthService();
-                bool loginresult = await firebaseAuthService.Login(userModel);
-                if (loginresult == true)
-                {
-                    HttpContext.Session.SetString("Email", userModel.Email);
-                    userModel.Email = HttpContext.Session.GetString("Email").ToString();
-                    return RedirectToAction("worklist", "Main");
-                }
-                else
-                {
-                    ViewBag.ErrorMessages = "Hatakı şifre veya kullanıcı adı";
-                    return View();
-                }
-
+                HttpContext.Session.SetString("Email",user.Email);
+                return RedirectToAction("Worklist","Main");
             }
-            catch (Exception e) 
-            {
-                ViewBag.ErrorMessages = "Hatakı şifre veya kullanıcı adı";
-                return View(); 
-            }
+            return View();
         }
-        public IActionResult Register()
+        [HttpGet]
+        public IActionResult register() 
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Register(UserProfile userModel)
+        public IActionResult register(User user)
         {
-            //create the user
+            dbContexts.User.Add(user);
+            dbContexts.SaveChanges();
             return View();
         }
 
-        // Hata sayfasını gösterme işlemi
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

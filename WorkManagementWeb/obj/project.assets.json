@@ -46,272 +46,6 @@
           }
         }
       },
-      "bootstrap/5.3.2": {
-        "type": "package",
-        "contentFiles": {
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.rtl.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.rtl.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.rtl.min.css": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/css/bootstrap.rtl.min.css.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.bundle.js": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.bundle.js.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.esm.js": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.esm.js.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.js": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.js.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.min.js": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/any/wwwroot/js/bootstrap.min.js.map": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
-      },
-      "Firebase.Auth/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-          "NETStandard.Library": "1.6.0",
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
-        }
-      },
-      "Firebase.Database/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "Rx-Main": "2.2.5"
-        },
-        "compile": {
-          "lib/portable45-net45+win8+wpa81/Firebase.Database.dll": {}
-        },
-        "runtime": {
-          "lib/portable45-net45+win8+wpa81/Firebase.Database.dll": {}
-        }
-      },
-      "FireSharp/2.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Net.Http": "2.2.28",
-          "Newtonsoft.Json": "6.0.4"
-        },
-        "compile": {
-          "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {}
-        }
-      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -915,46 +649,6 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "Microsoft.Bcl.Async/1.0.168": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.8"
-        },
-        "compile": {
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {
-            "related": ".xml"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {
-            "related": ".Desktop.xml;.xml"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.dll": {
-            "related": ".Extensions.Desktop.xml;.Extensions.xml;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {
-            "related": ".xml"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {
-            "related": ".Desktop.xml;.xml"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.dll": {
-            "related": ".Extensions.Desktop.xml;.Extensions.xml;.xml"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -967,9 +661,6 @@
             "related": ".xml"
           }
         }
-      },
-      "Microsoft.Bcl.Build/1.0.14": {
-        "type": "package"
       },
       "Microsoft.Build/17.3.2": {
         "type": "package",
@@ -2020,29 +1711,6 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "compile": {
-          "lib/net45/System.Net.Http.Extensions.dll": {
-            "related": ".XML"
-          },
-          "lib/net45/System.Net.Http.Primitives.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {
-            "related": ".XML"
-          },
-          "lib/net45/System.Net.Http.Primitives.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.NET.StringTools/17.3.2": {
         "type": "package",
         "dependencies": {
@@ -2060,9 +1728,6 @@
           }
         }
       },
-      "Microsoft.NETCore.Jit/1.0.2": {
-        "type": "package"
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -2070,48 +1735,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Microsoft.NETCore.Portable.Compatibility/1.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.ComponentModel.DataAnnotations.dll": {},
-          "ref/netstandard1.0/System.Core.dll": {},
-          "ref/netstandard1.0/System.Net.dll": {},
-          "ref/netstandard1.0/System.Numerics.dll": {},
-          "ref/netstandard1.0/System.Runtime.Serialization.dll": {},
-          "ref/netstandard1.0/System.ServiceModel.Web.dll": {},
-          "ref/netstandard1.0/System.ServiceModel.dll": {},
-          "ref/netstandard1.0/System.Windows.dll": {},
-          "ref/netstandard1.0/System.Xml.Linq.dll": {},
-          "ref/netstandard1.0/System.Xml.Serialization.dll": {},
-          "ref/netstandard1.0/System.Xml.dll": {},
-          "ref/netstandard1.0/System.dll": {},
-          "ref/netstandard1.0/mscorlib.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.ComponentModel.DataAnnotations.dll": {},
-          "lib/netstandard1.0/System.Core.dll": {},
-          "lib/netstandard1.0/System.Net.dll": {},
-          "lib/netstandard1.0/System.Numerics.dll": {},
-          "lib/netstandard1.0/System.Runtime.Serialization.dll": {},
-          "lib/netstandard1.0/System.ServiceModel.Web.dll": {},
-          "lib/netstandard1.0/System.ServiceModel.dll": {},
-          "lib/netstandard1.0/System.Windows.dll": {},
-          "lib/netstandard1.0/System.Xml.Linq.dll": {},
-          "lib/netstandard1.0/System.Xml.Serialization.dll": {},
-          "lib/netstandard1.0/System.Xml.dll": {},
-          "lib/netstandard1.0/System.dll": {}
-        }
-      },
-      "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Jit": "1.0.2",
-          "Microsoft.NETCore.Windows.ApiSets": "1.0.1"
         }
       },
       "Microsoft.NETCore.Targets/1.1.0": {
@@ -2122,9 +1745,6 @@
         "runtime": {
           "lib/netstandard1.0/_._": {}
         }
-      },
-      "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
-        "type": "package"
       },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
@@ -2650,78 +2270,6 @@
           "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
-          }
-        }
-      },
-      "Rx-Core/2.2.5": {
-        "type": "package",
-        "dependencies": {
-          "Rx-Interfaces": "2.2.5"
-        },
-        "compile": {
-          "lib/net45/System.Reactive.Core.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.Core.dll": {
-            "related": ".XML"
-          }
-        }
-      },
-      "Rx-Interfaces/2.2.5": {
-        "type": "package",
-        "compile": {
-          "lib/net45/System.Reactive.Interfaces.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.Interfaces.dll": {
-            "related": ".XML"
-          }
-        }
-      },
-      "Rx-Linq/2.2.5": {
-        "type": "package",
-        "dependencies": {
-          "Rx-Core": "2.2.5",
-          "Rx-Interfaces": "2.2.5"
-        },
-        "compile": {
-          "lib/net45/System.Reactive.Linq.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.Linq.dll": {
-            "related": ".XML"
-          }
-        }
-      },
-      "Rx-Main/2.2.5": {
-        "type": "package",
-        "dependencies": {
-          "Rx-Core": "2.2.5",
-          "Rx-Interfaces": "2.2.5",
-          "Rx-Linq": "2.2.5",
-          "Rx-PlatformServices": "2.2.5"
-        }
-      },
-      "Rx-PlatformServices/2.2.5": {
-        "type": "package",
-        "dependencies": {
-          "Rx-Core": "2.2.5",
-          "Rx-Interfaces": "2.2.5"
-        },
-        "compile": {
-          "lib/net45/System.Reactive.PlatformServices.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/System.Reactive.PlatformServices.dll": {
-            "related": ".XML"
           }
         }
       },
@@ -4347,142 +3895,6 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "bootstrap/5.3.2": {
-      "sha512": "m0/GEaLwE35B8P1xScFhwAsQi5o6kWPzOVPdGkoFwv+5YjmbgXFPQai71N5APwRCU52ZO4vHYWJ5DYSqKKgivw==",
-      "type": "package",
-      "path": "bootstrap/5.3.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "bootstrap.5.3.2.nupkg.sha512",
-        "bootstrap.nuspec",
-        "bootstrap.png",
-        "content/Content/bootstrap-grid.css",
-        "content/Content/bootstrap-grid.css.map",
-        "content/Content/bootstrap-grid.min.css",
-        "content/Content/bootstrap-grid.min.css.map",
-        "content/Content/bootstrap-grid.rtl.css",
-        "content/Content/bootstrap-grid.rtl.css.map",
-        "content/Content/bootstrap-grid.rtl.min.css",
-        "content/Content/bootstrap-grid.rtl.min.css.map",
-        "content/Content/bootstrap-reboot.css",
-        "content/Content/bootstrap-reboot.css.map",
-        "content/Content/bootstrap-reboot.min.css",
-        "content/Content/bootstrap-reboot.min.css.map",
-        "content/Content/bootstrap-reboot.rtl.css",
-        "content/Content/bootstrap-reboot.rtl.css.map",
-        "content/Content/bootstrap-reboot.rtl.min.css",
-        "content/Content/bootstrap-reboot.rtl.min.css.map",
-        "content/Content/bootstrap-utilities.css",
-        "content/Content/bootstrap-utilities.css.map",
-        "content/Content/bootstrap-utilities.min.css",
-        "content/Content/bootstrap-utilities.min.css.map",
-        "content/Content/bootstrap-utilities.rtl.css",
-        "content/Content/bootstrap-utilities.rtl.css.map",
-        "content/Content/bootstrap-utilities.rtl.min.css",
-        "content/Content/bootstrap-utilities.rtl.min.css.map",
-        "content/Content/bootstrap.css",
-        "content/Content/bootstrap.css.map",
-        "content/Content/bootstrap.min.css",
-        "content/Content/bootstrap.min.css.map",
-        "content/Content/bootstrap.rtl.css",
-        "content/Content/bootstrap.rtl.css.map",
-        "content/Content/bootstrap.rtl.min.css",
-        "content/Content/bootstrap.rtl.min.css.map",
-        "content/Scripts/bootstrap.bundle.js",
-        "content/Scripts/bootstrap.bundle.js.map",
-        "content/Scripts/bootstrap.bundle.min.js",
-        "content/Scripts/bootstrap.bundle.min.js.map",
-        "content/Scripts/bootstrap.esm.js",
-        "content/Scripts/bootstrap.esm.js.map",
-        "content/Scripts/bootstrap.esm.min.js",
-        "content/Scripts/bootstrap.esm.min.js.map",
-        "content/Scripts/bootstrap.js",
-        "content/Scripts/bootstrap.js.map",
-        "content/Scripts/bootstrap.min.js",
-        "content/Scripts/bootstrap.min.js.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap.min.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap.rtl.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap.rtl.css.map",
-        "contentFiles/any/any/wwwroot/css/bootstrap.rtl.min.css",
-        "contentFiles/any/any/wwwroot/css/bootstrap.rtl.min.css.map",
-        "contentFiles/any/any/wwwroot/js/bootstrap.bundle.js",
-        "contentFiles/any/any/wwwroot/js/bootstrap.bundle.js.map",
-        "contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js",
-        "contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js.map",
-        "contentFiles/any/any/wwwroot/js/bootstrap.esm.js",
-        "contentFiles/any/any/wwwroot/js/bootstrap.esm.js.map",
-        "contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js",
-        "contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js.map",
-        "contentFiles/any/any/wwwroot/js/bootstrap.js",
-        "contentFiles/any/any/wwwroot/js/bootstrap.js.map",
-        "contentFiles/any/any/wwwroot/js/bootstrap.min.js",
-        "contentFiles/any/any/wwwroot/js/bootstrap.min.js.map"
-      ]
-    },
-    "Firebase.Auth/1.0.0": {
-      "sha512": "MRAGIRDXqB0jRvtJx0yRmTMjZInQcUSyHN7LuOwxL/nfyceDEA+Gfiimn7HtI2ntHw3hdUAoeeCA6BCc3qg0/A==",
-      "type": "package",
-      "path": "firebase.auth/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "firebase.auth.1.0.0.nupkg.sha512",
-        "firebase.auth.nuspec",
-        "lib/netstandard1.1/Firebase.Auth.dll"
-      ]
-    },
-    "Firebase.Database/1.0.0": {
-      "sha512": "nEALT430lPZ86itiPiih9ndGG4ZV0sy5GaoVgzZTx5icqpFk/aHjIwMOpUqn7+Me0bDL6WOQnYlsnQcTD1t84g==",
-      "type": "package",
-      "path": "firebase.database/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "firebase.database.1.0.0.nupkg.sha512",
-        "firebase.database.nuspec",
-        "lib/portable45-net45+win8+wpa81/Firebase.Database.dll"
-      ]
-    },
-    "FireSharp/2.0.4": {
-      "sha512": "laSHpVUBG6iCTUixmpeUmYxie2zbziOBM+LU0v2A0ETE9dUyBA+8aY63xql/o8LXj+kFybBLYUKBUrLCZWaq+A==",
-      "type": "package",
-      "path": "firesharp/2.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "firesharp.2.0.4.nupkg.sha512",
-        "firesharp.nuspec",
-        "lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
-      ]
-    },
     "Humanizer/2.14.1": {
       "sha512": "/FUTD3cEceAAmJSCPN9+J+VhGwmL/C12jvwlyM1DFXShEMsBzvLzLqSrJ2rb+k/W2znKw7JyflZgZpyE+tI7lA==",
       "type": "package",
@@ -5243,166 +4655,6 @@
         "microsoft.aspnetcore.razor.language.nuspec"
       ]
     },
-    "Microsoft.Bcl/1.1.9": {
-      "sha512": "USQ55innJy8K+tAXvVa1O8dUTp2s7pmJ5cJj6Tl02HtGc2xBDj0P2QH5620HbGXIWKWYhydoeQF8Rm/JRDBGhw==",
-      "type": "package",
-      "path": "microsoft.bcl/1.1.9",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License-Stable.rtf",
-        "content/monoandroid/_._",
-        "content/monotouch/_._",
-        "content/net45/_._",
-        "content/portable-net45+win8+wp8+wpa81/_._",
-        "content/portable-net45+win8+wpa81/_._",
-        "content/portable-net451+win81+wpa81/_._",
-        "content/portable-net451+win81/_._",
-        "content/portable-win81+wp81+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl5/_._",
-        "content/win8/_._",
-        "content/wp8/_._",
-        "content/wpa81/_._",
-        "lib/monoandroid/_._",
-        "lib/monotouch/_._",
-        "lib/net40/System.IO.dll",
-        "lib/net40/System.IO.xml",
-        "lib/net40/System.Runtime.dll",
-        "lib/net40/System.Runtime.xml",
-        "lib/net40/System.Threading.Tasks.dll",
-        "lib/net40/System.Threading.Tasks.xml",
-        "lib/net40/ensureRedirect.xml",
-        "lib/net45/_._",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8/System.IO.dll",
-        "lib/portable-net40+sl4+win8/System.IO.xml",
-        "lib/portable-net40+sl4+win8/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8/ensureRedirect.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+win8/System.IO.dll",
-        "lib/portable-net40+win8/System.IO.xml",
-        "lib/portable-net40+win8/System.Runtime.dll",
-        "lib/portable-net40+win8/System.Runtime.xml",
-        "lib/portable-net40+win8/System.Threading.Tasks.dll",
-        "lib/portable-net40+win8/System.Threading.Tasks.xml",
-        "lib/portable-net40+win8/ensureRedirect.xml",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/portable-net45+win8+wpa81/_._",
-        "lib/portable-net451+win81+wpa81/_._",
-        "lib/portable-net451+win81/_._",
-        "lib/portable-win81+wp81+wpa81/_._",
-        "lib/sl4-windowsphone71/System.IO.dll",
-        "lib/sl4-windowsphone71/System.IO.xml",
-        "lib/sl4-windowsphone71/System.Runtime.dll",
-        "lib/sl4-windowsphone71/System.Runtime.xml",
-        "lib/sl4-windowsphone71/System.Threading.Tasks.dll",
-        "lib/sl4-windowsphone71/System.Threading.Tasks.xml",
-        "lib/sl4-windowsphone71/ensureRedirect.xml",
-        "lib/sl4/System.IO.dll",
-        "lib/sl4/System.IO.xml",
-        "lib/sl4/System.Runtime.dll",
-        "lib/sl4/System.Runtime.xml",
-        "lib/sl4/System.Threading.Tasks.dll",
-        "lib/sl4/System.Threading.Tasks.xml",
-        "lib/sl5/System.IO.dll",
-        "lib/sl5/System.IO.xml",
-        "lib/sl5/System.Runtime.dll",
-        "lib/sl5/System.Runtime.xml",
-        "lib/sl5/System.Threading.Tasks.dll",
-        "lib/sl5/System.Threading.Tasks.xml",
-        "lib/win8/_._",
-        "lib/wp8/_._",
-        "lib/wpa81/_._",
-        "microsoft.bcl.1.1.9.nupkg.sha512",
-        "microsoft.bcl.nuspec"
-      ]
-    },
-    "Microsoft.Bcl.Async/1.0.168": {
-      "sha512": "tUNC02eBwDKpGre0BcNIvblLv1q0Q3DnS/vtkRHj2FE1sXwt386HAudztyl5C0U88hllrqHDvtlz8bK0Y8cHDA==",
-      "type": "package",
-      "path": "microsoft.bcl.async/1.0.168",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License-Stable.rtf",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.xml",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/net40/Microsoft.Threading.Tasks.dll",
-        "lib/net40/Microsoft.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.xml",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.xml",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.dll",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.xml",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.dll",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.xml",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.dll",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.xml",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/sl4/Microsoft.Threading.Tasks.dll",
-        "lib/sl4/Microsoft.Threading.Tasks.xml",
-        "lib/win8/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/win8/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/win8/Microsoft.Threading.Tasks.dll",
-        "lib/win8/Microsoft.Threading.Tasks.xml",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.dll",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/wp8/Microsoft.Threading.Tasks.dll",
-        "lib/wp8/Microsoft.Threading.Tasks.xml",
-        "lib/wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/wpa81/Microsoft.Threading.Tasks.xml",
-        "microsoft.bcl.async.1.0.168.nupkg.sha512",
-        "microsoft.bcl.async.nuspec"
-      ]
-    },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
       "type": "package",
@@ -5422,28 +4674,6 @@
         "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Bcl.Build/1.0.14": {
-      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
-      "type": "package",
-      "path": "microsoft.bcl.build/1.0.14",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License-Stable.rtf",
-        "content/net40/_._",
-        "content/netcore45/_._",
-        "content/portable-net40+win8+sl4+wp71+wpa81/_._",
-        "content/sl4-windowsphone71/_._",
-        "content/sl4/_._",
-        "microsoft.bcl.build.1.0.14.nupkg.sha512",
-        "microsoft.bcl.build.nuspec",
-        "tools/Install.ps1",
-        "tools/Microsoft.Bcl.Build.Tasks.dll",
-        "tools/Microsoft.Bcl.Build.targets",
-        "tools/Uninstall.ps1"
       ]
     },
     "Microsoft.Build/17.3.2": {
@@ -6896,71 +6126,6 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.Net.Http/2.2.28": {
-      "sha512": "hPL9k+rPIpAj84RZSq3WtJkOD9uMStBovAIAz/0OQ+9hQIwQ2XqQlAhMqI4kw0XDxweJySIqNTMlkhRRuthcPQ==",
-      "type": "package",
-      "path": "microsoft.net.http/2.2.28",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License-Stable.rtf",
-        "lib/monoandroid/System.Net.Http.Extensions.XML",
-        "lib/monoandroid/System.Net.Http.Extensions.dll",
-        "lib/monoandroid/System.Net.Http.Primitives.dll",
-        "lib/monoandroid/System.Net.Http.Primitives.xml",
-        "lib/monotouch/System.Net.Http.Extensions.XML",
-        "lib/monotouch/System.Net.Http.Extensions.dll",
-        "lib/monotouch/System.Net.Http.Primitives.dll",
-        "lib/monotouch/System.Net.Http.Primitives.xml",
-        "lib/net40/System.Net.Http.Extensions.XML",
-        "lib/net40/System.Net.Http.Extensions.dll",
-        "lib/net40/System.Net.Http.Primitives.dll",
-        "lib/net40/System.Net.Http.Primitives.xml",
-        "lib/net40/System.Net.Http.WebRequest.dll",
-        "lib/net40/System.Net.Http.WebRequest.xml",
-        "lib/net40/System.Net.Http.dll",
-        "lib/net40/System.Net.Http.xml",
-        "lib/net40/ensureRedirect.xml",
-        "lib/net45/System.Net.Http.Extensions.XML",
-        "lib/net45/System.Net.Http.Extensions.dll",
-        "lib/net45/System.Net.Http.Primitives.dll",
-        "lib/net45/System.Net.Http.Primitives.xml",
-        "lib/net45/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.XML",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.XML",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.XML",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.dll",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.dll",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.xml",
-        "lib/portable-net45+win8+wpa81/ensureRedirect.xml",
-        "lib/portable-net45+win8/System.Net.Http.Extensions.XML",
-        "lib/portable-net45+win8/System.Net.Http.Extensions.dll",
-        "lib/portable-net45+win8/System.Net.Http.Primitives.dll",
-        "lib/portable-net45+win8/System.Net.Http.Primitives.xml",
-        "lib/portable-net45+win8/ensureRedirect.xml",
-        "lib/sl4-windowsphone71/System.Net.Http.Extensions.XML",
-        "lib/sl4-windowsphone71/System.Net.Http.Extensions.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Primitives.XML",
-        "lib/sl4-windowsphone71/System.Net.Http.Primitives.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.xml",
-        "lib/win8/System.Net.Http.Extensions.XML",
-        "lib/win8/System.Net.Http.Extensions.dll",
-        "lib/win8/System.Net.Http.Primitives.dll",
-        "lib/win8/System.Net.Http.Primitives.xml",
-        "lib/wpa81/System.Net.Http.Extensions.XML",
-        "lib/wpa81/System.Net.Http.Extensions.dll",
-        "lib/wpa81/System.Net.Http.Primitives.dll",
-        "lib/wpa81/System.Net.Http.Primitives.xml",
-        "microsoft.net.http.2.2.28.nupkg.sha512",
-        "microsoft.net.http.nuspec"
-      ]
-    },
     "Microsoft.NET.StringTools/17.3.2": {
       "sha512": "3sIZECEDSY9kP7BqPLOSIHLsiqv0TSU5cIGAMung+NrefIooo1tBMVRt598CGz+kUF1xlbOsO8nPAYpgfokx/Q==",
       "type": "package",
@@ -6992,19 +6157,6 @@
         "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
       ]
     },
-    "Microsoft.NETCore.Jit/1.0.2": {
-      "sha512": "Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw==",
-      "type": "package",
-      "path": "microsoft.netcore.jit/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "microsoft.netcore.jit.1.0.2.nupkg.sha512",
-        "microsoft.netcore.jit.nuspec",
-        "runtime.json"
-      ]
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -7020,102 +6172,6 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Portable.Compatibility/1.0.1": {
-      "sha512": "Vd+lvLcGwvkedxtKn0U8s9uR4p0Lm+0U2QvDsLaw7g4S1W4KfPDbaW+ROhhLCSOx/gMYC72/b+z+o4fqS/oxVg==",
-      "type": "package",
-      "path": "microsoft.netcore.portable.compatibility/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/net45/_._",
-        "lib/netcore50/System.ComponentModel.DataAnnotations.dll",
-        "lib/netcore50/System.Core.dll",
-        "lib/netcore50/System.Net.dll",
-        "lib/netcore50/System.Numerics.dll",
-        "lib/netcore50/System.Runtime.Serialization.dll",
-        "lib/netcore50/System.ServiceModel.Web.dll",
-        "lib/netcore50/System.ServiceModel.dll",
-        "lib/netcore50/System.Windows.dll",
-        "lib/netcore50/System.Xml.Linq.dll",
-        "lib/netcore50/System.Xml.Serialization.dll",
-        "lib/netcore50/System.Xml.dll",
-        "lib/netcore50/System.dll",
-        "lib/netstandard1.0/System.ComponentModel.DataAnnotations.dll",
-        "lib/netstandard1.0/System.Core.dll",
-        "lib/netstandard1.0/System.Net.dll",
-        "lib/netstandard1.0/System.Numerics.dll",
-        "lib/netstandard1.0/System.Runtime.Serialization.dll",
-        "lib/netstandard1.0/System.ServiceModel.Web.dll",
-        "lib/netstandard1.0/System.ServiceModel.dll",
-        "lib/netstandard1.0/System.Windows.dll",
-        "lib/netstandard1.0/System.Xml.Linq.dll",
-        "lib/netstandard1.0/System.Xml.Serialization.dll",
-        "lib/netstandard1.0/System.Xml.dll",
-        "lib/netstandard1.0/System.dll",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "microsoft.netcore.portable.compatibility.1.0.1.nupkg.sha512",
-        "microsoft.netcore.portable.compatibility.nuspec",
-        "ref/net45/_._",
-        "ref/netcore50/System.ComponentModel.DataAnnotations.dll",
-        "ref/netcore50/System.Core.dll",
-        "ref/netcore50/System.Net.dll",
-        "ref/netcore50/System.Numerics.dll",
-        "ref/netcore50/System.Runtime.Serialization.dll",
-        "ref/netcore50/System.ServiceModel.Web.dll",
-        "ref/netcore50/System.ServiceModel.dll",
-        "ref/netcore50/System.Windows.dll",
-        "ref/netcore50/System.Xml.Linq.dll",
-        "ref/netcore50/System.Xml.Serialization.dll",
-        "ref/netcore50/System.Xml.dll",
-        "ref/netcore50/System.dll",
-        "ref/netcore50/mscorlib.dll",
-        "ref/netstandard1.0/System.ComponentModel.DataAnnotations.dll",
-        "ref/netstandard1.0/System.Core.dll",
-        "ref/netstandard1.0/System.Net.dll",
-        "ref/netstandard1.0/System.Numerics.dll",
-        "ref/netstandard1.0/System.Runtime.Serialization.dll",
-        "ref/netstandard1.0/System.ServiceModel.Web.dll",
-        "ref/netstandard1.0/System.ServiceModel.dll",
-        "ref/netstandard1.0/System.Windows.dll",
-        "ref/netstandard1.0/System.Xml.Linq.dll",
-        "ref/netstandard1.0/System.Xml.Serialization.dll",
-        "ref/netstandard1.0/System.Xml.dll",
-        "ref/netstandard1.0/System.dll",
-        "ref/netstandard1.0/mscorlib.dll",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "runtimes/aot/lib/netcore50/System.ComponentModel.DataAnnotations.dll",
-        "runtimes/aot/lib/netcore50/System.Core.dll",
-        "runtimes/aot/lib/netcore50/System.Net.dll",
-        "runtimes/aot/lib/netcore50/System.Numerics.dll",
-        "runtimes/aot/lib/netcore50/System.Runtime.Serialization.dll",
-        "runtimes/aot/lib/netcore50/System.ServiceModel.Web.dll",
-        "runtimes/aot/lib/netcore50/System.ServiceModel.dll",
-        "runtimes/aot/lib/netcore50/System.Windows.dll",
-        "runtimes/aot/lib/netcore50/System.Xml.Linq.dll",
-        "runtimes/aot/lib/netcore50/System.Xml.Serialization.dll",
-        "runtimes/aot/lib/netcore50/System.Xml.dll",
-        "runtimes/aot/lib/netcore50/System.dll",
-        "runtimes/aot/lib/netcore50/mscorlib.dll"
-      ]
-    },
-    "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
-      "sha512": "A0x1xtTjYJWZr2DRzgfCOXgB0JkQg8twnmtTJ79wFje+IihlLbXtx6Z2AxyVokBM5ruwTedR6YdCmHk39QJdtQ==",
-      "type": "package",
-      "path": "microsoft.netcore.runtime.coreclr/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "microsoft.netcore.runtime.coreclr.1.0.2.nupkg.sha512",
-        "microsoft.netcore.runtime.coreclr.nuspec",
-        "runtime.json"
-      ]
-    },
     "Microsoft.NETCore.Targets/1.1.0": {
       "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "type": "package",
@@ -7128,20 +6184,6 @@
         "lib/netstandard1.0/_._",
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
-        "runtime.json"
-      ]
-    },
-    "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
-      "sha512": "SaToCvvsGMxTgtLv/BrFQ5IFMPRE1zpWbnqbpwykJa8W5XiX82CXI6K2o7yf5xS7EP6t/JzFLV0SIDuWpvBZVw==",
-      "type": "package",
-      "path": "microsoft.netcore.windows.apisets/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "microsoft.netcore.windows.apisets.1.0.1.nupkg.sha512",
-        "microsoft.netcore.windows.apisets.nuspec",
         "runtime.json"
       ]
     },
@@ -8205,141 +7247,6 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
-      ]
-    },
-    "Rx-Core/2.2.5": {
-      "sha512": "DfWVTfW6tvRkkqpnRHKxPIvaRZyDJGADuqrE6J2nwejOQbLRWi0rNUwXkViDWz++25BGDy3iRE5OE6Dv8mJxYQ==",
-      "type": "package",
-      "path": "rx-core/2.2.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Reactive.Core.XML",
-        "lib/net40/System.Reactive.Core.dll",
-        "lib/net45/System.Reactive.Core.XML",
-        "lib/net45/System.Reactive.Core.dll",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Core.XML",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Core.dll",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.XML",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.dll",
-        "lib/portable-win81+wpa81/System.Reactive.Core.XML",
-        "lib/portable-win81+wpa81/System.Reactive.Core.dll",
-        "lib/portable-windows8+net45+wp8/System.Reactive.Core.XML",
-        "lib/portable-windows8+net45+wp8/System.Reactive.Core.dll",
-        "lib/sl5/System.Reactive.Core.XML",
-        "lib/sl5/System.Reactive.Core.dll",
-        "lib/windows8/System.Reactive.Core.XML",
-        "lib/windows8/System.Reactive.Core.dll",
-        "lib/windowsphone71/System.Reactive.Core.XML",
-        "lib/windowsphone71/System.Reactive.Core.dll",
-        "lib/windowsphone8/System.Reactive.Core.XML",
-        "lib/windowsphone8/System.Reactive.Core.dll",
-        "rx-core.2.2.5.nupkg.sha512",
-        "rx-core.nuspec"
-      ]
-    },
-    "Rx-Interfaces/2.2.5": {
-      "sha512": "FKtG2QfMIeUcfB7r3a89VoAiszX3DTvYETkpC6U0FzWpxRK/mcHyzYOsniDfag+NsDG0P1k1c8yNSefXKp3t2A==",
-      "type": "package",
-      "path": "rx-interfaces/2.2.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Reactive.Interfaces.XML",
-        "lib/net40/System.Reactive.Interfaces.dll",
-        "lib/net45/System.Reactive.Interfaces.XML",
-        "lib/net45/System.Reactive.Interfaces.dll",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Interfaces.XML",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Interfaces.dll",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.XML",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.dll",
-        "lib/portable-win81+wpa81/System.Reactive.Interfaces.XML",
-        "lib/portable-win81+wpa81/System.Reactive.Interfaces.dll",
-        "lib/portable-windows8+net45+wp8/System.Reactive.Interfaces.XML",
-        "lib/portable-windows8+net45+wp8/System.Reactive.Interfaces.dll",
-        "lib/sl5/System.Reactive.Interfaces.XML",
-        "lib/sl5/System.Reactive.Interfaces.dll",
-        "lib/windows8/System.Reactive.Interfaces.XML",
-        "lib/windows8/System.Reactive.Interfaces.dll",
-        "lib/windowsphone71/System.Reactive.Interfaces.XML",
-        "lib/windowsphone71/System.Reactive.Interfaces.dll",
-        "lib/windowsphone8/System.Reactive.Interfaces.XML",
-        "lib/windowsphone8/System.Reactive.Interfaces.dll",
-        "rx-interfaces.2.2.5.nupkg.sha512",
-        "rx-interfaces.nuspec"
-      ]
-    },
-    "Rx-Linq/2.2.5": {
-      "sha512": "UTeCIu3cWPExxmTzdiVq7SalqTBhUaomBTaAC9LpYPoAopjlFwA3hjVWXoLkGlDc/44wqJemJuEwFP00KphiFg==",
-      "type": "package",
-      "path": "rx-linq/2.2.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Reactive.Linq.XML",
-        "lib/net40/System.Reactive.Linq.dll",
-        "lib/net45/System.Reactive.Linq.XML",
-        "lib/net45/System.Reactive.Linq.dll",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Linq.XML",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Linq.dll",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.XML",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.dll",
-        "lib/portable-win81+wpa81/System.Reactive.Linq.XML",
-        "lib/portable-win81+wpa81/System.Reactive.Linq.dll",
-        "lib/portable-windows8+net45+wp8/System.Reactive.Linq.XML",
-        "lib/portable-windows8+net45+wp8/System.Reactive.Linq.dll",
-        "lib/sl5/System.Reactive.Linq.XML",
-        "lib/sl5/System.Reactive.Linq.dll",
-        "lib/windows8/System.Reactive.Linq.XML",
-        "lib/windows8/System.Reactive.Linq.dll",
-        "lib/windowsphone71/System.Reactive.Linq.XML",
-        "lib/windowsphone71/System.Reactive.Linq.dll",
-        "lib/windowsphone8/System.Reactive.Linq.XML",
-        "lib/windowsphone8/System.Reactive.Linq.dll",
-        "rx-linq.2.2.5.nupkg.sha512",
-        "rx-linq.nuspec"
-      ]
-    },
-    "Rx-Main/2.2.5": {
-      "sha512": "qdQ6qENEiLsp/LRdzZlLlodihWN8VDjwNfWa8c2ELjEHZgTdKzt1V4i61gkHVtFKZXe8Px6KupbMP3pZ+1tusQ==",
-      "type": "package",
-      "path": "rx-main/2.2.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "rx-main.2.2.5.nupkg.sha512",
-        "rx-main.nuspec"
-      ]
-    },
-    "Rx-PlatformServices/2.2.5": {
-      "sha512": "pMnNEvJVjT+wuDib+W/bi5hhIYcre7dW5yxvKrJxnR4iKJ1VLA/dY2FTtjDriHGx7OeGn12lQewXlH2oHiWFPA==",
-      "type": "package",
-      "path": "rx-platformservices/2.2.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Reactive.PlatformServices.XML",
-        "lib/net40/System.Reactive.PlatformServices.dll",
-        "lib/net45/System.Reactive.PlatformServices.XML",
-        "lib/net45/System.Reactive.PlatformServices.dll",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.PlatformServices.XML",
-        "lib/portable-net40+sl5+win8+wp8/System.Reactive.PlatformServices.dll",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.XML",
-        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.dll",
-        "lib/portable-win81+wpa81/System.Reactive.PlatformServices.XML",
-        "lib/portable-win81+wpa81/System.Reactive.PlatformServices.dll",
-        "lib/portable-windows8+net45+wp8/System.Reactive.PlatformServices.XML",
-        "lib/portable-windows8+net45+wp8/System.Reactive.PlatformServices.dll",
-        "lib/sl5/System.Reactive.PlatformServices.XML",
-        "lib/sl5/System.Reactive.PlatformServices.dll",
-        "lib/windows8/System.Reactive.PlatformServices.XML",
-        "lib/windows8/System.Reactive.PlatformServices.dll",
-        "lib/windowsphone71/System.Reactive.PlatformServices.XML",
-        "lib/windowsphone71/System.Reactive.PlatformServices.dll",
-        "lib/windowsphone8/System.Reactive.PlatformServices.XML",
-        "lib/windowsphone8/System.Reactive.PlatformServices.dll",
-        "rx-platformservices.2.2.5.nupkg.sha512",
-        "rx-platformservices.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -12296,15 +11203,11 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "FireSharp >= 2.0.4",
-      "Firebase.Auth >= 1.0.0",
-      "Firebase.Database >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.14",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
-      "bootstrap >= 5.3.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11"
     ]
   },
   "packageFolders": {
@@ -12352,18 +11255,6 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "FireSharp": {
-            "target": "Package",
-            "version": "[2.0.4, )"
-          },
-          "Firebase.Auth": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
-          "Firebase.Database": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.14, )"
@@ -12387,10 +11278,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[7.0.11, )"
-          },
-          "bootstrap": {
-            "target": "Package",
-            "version": "[5.3.2, )"
           }
         },
         "imports": [
@@ -12415,97 +11302,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Firebase.Database 1.0.0' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Firebase.Database",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'FireSharp 2.0.4' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Microsoft.Bcl 1.1.9' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Microsoft.Bcl",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Microsoft.Bcl.Async 1.0.168' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Microsoft.Bcl.Async",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Microsoft.Net.Http 2.2.28' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Microsoft.Net.Http",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Rx-Core 2.2.5' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Rx-Core",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Rx-Interfaces 2.2.5' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Rx-Interfaces",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Rx-Linq 2.2.5' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Rx-Linq",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Rx-PlatformServices 2.2.5' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Rx-PlatformServices",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  }
 }

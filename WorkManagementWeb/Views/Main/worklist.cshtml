@@ -8,19 +8,22 @@
 @ViewBag.User
 </h4>
 <ul class="list-unstyled">
+     @using(Html.BeginForm("Sonuc","Main",FormMethod.Post)){
     @if (Model != null)
     {
         @foreach (var item in Model)
         {
             <li class="mt-4 d-flex justify-content-center">
-                @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.JobListName }, new { @class = "btn btn-primary w-50 text-center" })
+                @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID }, new { @class = "btn btn-primary w-50 text-center" })
             </li>
+        
         }
 
     }
     else
     {
 
+    }
     }
 </ul>
 

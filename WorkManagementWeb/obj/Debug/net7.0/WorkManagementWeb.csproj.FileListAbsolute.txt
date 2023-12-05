@@ -525,13 +525,8 @@ C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\ne
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\WorkManagementWeb.pdb
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Firebase.Database.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\FireSharp.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Humanizer.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Threading.Tasks.Extensions.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Threading.Tasks.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Build.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.Build.Framework.dll
@@ -562,8 +557,6 @@ C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\ne
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Net.Http.Extensions.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Net.Http.Primitives.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.NET.StringTools.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -585,10 +578,6 @@ C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\ne
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\NuGet.ProjectModel.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\NuGet.Protocol.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\NuGet.Versioning.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.Core.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.Interfaces.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.Linq.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Reactive.PlatformServices.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Composition.AttributedModel.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.Composition.Convention.dll
@@ -780,5 +769,3 @@ C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\ne
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.genruntimeconfig.cache
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\ref\WorkManagementWeb.dll
 C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\obj\Debug\net7.0\WorkManagementWeb.sourcelink.json
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\Firebase.Auth.dll
-C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\bin\Debug\net7.0\System.ServiceModel.dll
