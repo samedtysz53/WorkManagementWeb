@@ -1,33 +1,25 @@
-﻿@model IEnumerable<WorkManagementWeb.Models.TaskListModels>
+﻿@model IEnumerable<TaskListModels>
 
 @{
     ViewData["Title"] = "Sonuc";
     Layout = "~/Views/Template/Template.cshtml";
 }
 
-<h1>Sonuc</h1>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TaskName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.JobListName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Done)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model != null)
-        {
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    İş Adı
+                </th>
+                <th>
+                    Tarih
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
             @foreach (var item in Model)
             {
                 <tr>
@@ -38,29 +30,47 @@
                         @Html.DisplayFor(modelItem => item.Time)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.JobListName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Done)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ID">Güncelle</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ID">Bitir</a>
+                        <a asp-route-id="@item.ID" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Güncelle</a>
+                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Bitir</a>
                     </td>
                 </tr>
             }
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
-@using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
-{
-    <div class="form-group">
-        <label for="taskname">İş Adı:</label>
-        <input type="text" id="taskname" name="taskname" class="form-control" placeholder="İş Adı" />
+    @using (Html.BeginForm("Sonuc", "Main", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="taskname">İş Adı:</label>
+            <input type="text" id="taskname" name="taskname" class="form-control" placeholder="İş Adı" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Ekle</button>
+    }
+
+    <!-- Popup menu -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" asp-controller="Main" asp-action="Guncelle">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Güncelle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>İş Adı</label>
+                            <input type="text" class="form-control" name="taskname" required="required" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Güncelle"  />
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-     
-    
-     
-    <button type="submit" class="btn btn-success">Ekle</button>
 }

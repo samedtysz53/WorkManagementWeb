@@ -118,6 +118,13 @@ namespace WorkManagementWeb.Controllers
            
         }
 
+        [HttpGet]
+        public IActionResult Day() 
+        {
+            var filter = DbContexts.TaskListModels.Where(x => x.Time >= DateTime.Today && x.Time < DateTime.Today.AddDays(1)).ToList();
+
+            return View(filter);
+        }
         public bool SessionControl()
         {
             string userEmail = HttpContext.Session.GetString("Email");
@@ -193,7 +200,7 @@ namespace WorkManagementWeb.Controllers
             var filter = DbContexts.JoblistModels.FirstOrDefault(x => x.ID == ID);
             if (filter != null)
             {
-                var list = DbContexts.TaskListModels.Where(x => x.JobListName == filter.JobListName).ToList();
+                var list = DbContexts.TaskListModels.Where(x => x.JobListName == filter.JobListName && x.Done == true).ToList();
 
 
                 return list;
