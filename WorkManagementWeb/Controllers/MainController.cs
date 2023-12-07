@@ -130,6 +130,12 @@ namespace WorkManagementWeb.Controllers
 
             return View(filter);
         }
+       
+        public IActionResult SeletTeam() 
+        {
+
+            return View();
+        }
         public bool SessionControl()
         {
             string userEmail = HttpContext.Session.GetString("Email");

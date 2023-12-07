@@ -43,7 +43,7 @@ namespace WorkManagementWeb.Controllers
             if (filter != null) 
             {
                 HttpContext.Session.SetString("Email",user.Email);
-                return RedirectToAction("Worklist","Main");
+                return RedirectToAction("SeletTeam", "Main");
             }
             return View();
         }
@@ -55,10 +55,28 @@ namespace WorkManagementWeb.Controllers
         [HttpPost]
         public IActionResult register(User user)
         {
+            string uniqueCode;
+            do
+            {
+                uniqueCode = GenerateRandomCode();
+            } while (IsCodeExists(uniqueCode));
+
+            user.RandomCode = "#"+uniqueCode;
+
             dbContexts.User.Add(user);
             dbContexts.SaveChanges();
-            return RedirectToAction("worklist","Main");
-        }
 
+            return RedirectToAction("worklist", "Main");
+        }
+        private string GenerateRandomCode()
+        {
+            Random random = new Random();
+            int code = random.Next(0, 10000); // 1000 ile 9999 arasında random sayı üret
+            return code.ToString();
+        }
+        private bool IsCodeExists(string code)
+        {
+            return dbContexts.User.Any(u => u.RandomCode == code);
+        }
     }
 }

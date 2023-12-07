@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "SeletTeam";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>SeletTeam</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .custom-div {
+            background-color: darkcyan;
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 2px;
+        }
+
+        .custom-button {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- Özel İşler Alanı -->
+            <div class="col-md-5 custom-div mx-auto">
+                <h2>Özel İşler</h2>
+                <p>Bu alan özel işler için ayrılmıştır.</p>
+                <a asp-controller="Main" asp-action="worklist" class="btn btn-primary custom-button">Özel İşler</a>
+            </div>
+
+            <!-- Ekip İşleri Alanı -->
+            <div class="col-md-5 custom-div mx-auto">
+                <h2>Ekip İşleri</h2>
+                <p>Bu alan ekip işleri için ayrılmıştır.</p>
+                <button class="btn btn-success custom-button">Ekip İşlerini Görüntüle</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Ekip Oluştur Buton Alanı -->
+            <div class="col-md-5 custom-div text-center mx-auto">
+                <h2>Ekip Oluştur</h2>
+                <button class="btn btn-warning custom-button">Yeni Ekip Oluştur</button>
+            </div>
+            <div class="col-md-5 custom-div text-center mx-auto">
+                <h2>Ekip Davetleri</h2>
+                <button class="btn btn-warning custom-button">Ekip Davetleri</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS ve jQuery kütüphaneleri -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

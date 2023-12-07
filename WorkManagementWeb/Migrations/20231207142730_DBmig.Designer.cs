@@ -12,8 +12,8 @@ using WorkManagementWeb.Models;
 namespace WorkManagementWeb.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20231207090836_DBMig")]
-    partial class DBMig
+    [Migration("20231207142730_DBmig")]
+    partial class DBmig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,6 +97,13 @@ namespace WorkManagementWeb.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RandomCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Team")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Time")

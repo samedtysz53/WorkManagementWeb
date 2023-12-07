@@ -11,7 +11,8 @@ namespace WorkManagementWeb.Models
         public string Password { get; set; }
         public DateTime Time { get; set; }
 
-
+        public string RandomCode { get; set; }
+        public string? Team {get;set;}
 
 
     }
