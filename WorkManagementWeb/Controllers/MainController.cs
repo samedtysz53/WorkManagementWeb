@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using WorkManagementWeb.Models;
 
@@ -10,8 +11,10 @@ namespace WorkManagementWeb.Controllers
         private readonly DbContexts DbContexts;
         public MainController(ILogger<HomeController> logger,DbContexts contexts) 
         {
+          
             this.DbContexts = contexts;
-        //firebaseController=new FirebaseController();
+            //firebaseController=new FirebaseController();
+          
         }
         public IActionResult Index()
         {
@@ -54,7 +57,7 @@ namespace WorkManagementWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult Sonuc(string taskname) 
+        public IActionResult Sonuc(string taskname,string Description) 
         {
             var JID = HttpContext.Session.GetInt32("ID");
 
@@ -65,6 +68,7 @@ namespace WorkManagementWeb.Controllers
             taskListModels.TaskName = taskname;
             taskListModels.JobListName = filter.JobListName;
             taskListModels.Time = DateTime.Now;
+            taskListModels.Description = Description;
             taskListModels.Done = true;
             DbContexts.TaskListModels.Add(taskListModels);
             DbContexts.SaveChanges();
@@ -104,6 +108,7 @@ namespace WorkManagementWeb.Controllers
 
             if (SessionControl())
             {
+                joblistModels.Time = DateTime.Now;
                 string Name = HttpContext.Session.GetString("Email");
                 ViewBag.User = HttpContext.Session.GetString("Email");
                 //firebaseController.CreateJobList(joblistModels,Name);
@@ -121,7 +126,7 @@ namespace WorkManagementWeb.Controllers
         [HttpGet]
         public IActionResult Day() 
         {
-            var filter = DbContexts.TaskListModels.Where(x => x.Time >= DateTime.Today && x.Time < DateTime.Today.AddDays(1)).ToList();
+            var filter = DbContexts.TaskListModels.Where(x => x.Time >= DateTime.Today && x.Time < DateTime.Today.AddDays(1) && x.Done == true).ToList();
 
             return View(filter);
         }
@@ -145,8 +150,34 @@ namespace WorkManagementWeb.Controllers
         return RedirectToAction("Index","Home");
         }
 
-      
-       
+      public IActionResult TaskEnd(int id) 
+        {
+            if (SessionControl()) 
+            {
+                var filter = DbContexts.TaskListModels.FirstOrDefault(x => x.ID == id && x.Done == true);
+                if (filter != null)
+                {
+                    filter.Done = false;
+                    filter.EndTime = DateTime.Now;
+                    // Diğer güncelleme işlemlerini buraya ekleyin
+
+                    // Değişiklikleri kaydedin
+                    DbContexts.SaveChanges();
+                }
+            }
+            return RedirectToAction("CompletedTask");
+        }
+
+        public IActionResult CompletedTask() 
+        {
+
+            if (SessionControl()) 
+            {
+                var filter = DbContexts.TaskListModels.Where(x => x.Done == false).ToList();
+                return View(filter);
+            }
+            return RedirectToAction("Index","Main");
+        }
         public void JoblistAdd(JoblistModels joblistModels) 
         {
             joblistModels.Email = HttpContext.Session.GetString("Email");
@@ -208,7 +239,7 @@ namespace WorkManagementWeb.Controllers
             return null;
 
         }
-
+        
 
     }
 }

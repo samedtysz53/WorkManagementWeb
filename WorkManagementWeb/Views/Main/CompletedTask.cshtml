@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.TaskListModels>
+
+@{
+    ViewData["Title"] = "CompletedTask";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+<h1>Tamamlanan Görevler</h1>
+ <p>
+    <a asp-controller="Main" asp-action="GeneratePdf" class="nav-item nav-link">Yazdır</a>
+ </p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobListName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+             
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaskName)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobListName)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+          
+             
+        </tr>
+}
+    </tbody>
+</table>

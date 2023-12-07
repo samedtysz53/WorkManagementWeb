@@ -6,26 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WorkManagementWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class DbMigs : Migration
+    public partial class DBMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "DeleteTaskLists",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DeleteTaskName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Time = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    JobListName = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DeleteTaskLists", x => x.ID);
-                });
-
             migrationBuilder.CreateTable(
                 name: "JoblistModels",
                 columns: table => new
@@ -42,20 +27,6 @@ namespace WorkManagementWeb.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Log",
-                columns: table => new
-                {
-                    L_ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Time = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Log", x => x.L_ID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "TaskListModels",
                 columns: table => new
                 {
@@ -64,6 +35,8 @@ namespace WorkManagementWeb.Migrations
                     TaskName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Time = table.Column<DateTime>(type: "datetime2", nullable: false),
                     JobListName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Done = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -92,13 +65,7 @@ namespace WorkManagementWeb.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DeleteTaskLists");
-
-            migrationBuilder.DropTable(
                 name: "JoblistModels");
-
-            migrationBuilder.DropTable(
-                name: "Log");
 
             migrationBuilder.DropTable(
                 name: "TaskListModels");

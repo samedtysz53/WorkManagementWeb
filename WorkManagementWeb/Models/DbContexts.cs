@@ -12,9 +12,9 @@ namespace WorkManagementWeb.Models
 
         public DbSet<JoblistModels> JoblistModels { get; set; }
         public DbSet<TaskListModels> TaskListModels { get; set; }
-        public DbSet<DeleteTaskList> DeleteTaskLists { get; set; }
+       
         public DbSet<User> User { get; set; }
-        public DbSet<Log> Log { get; set; }
+        
 
 
 

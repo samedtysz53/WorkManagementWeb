@@ -12,8 +12,8 @@ using WorkManagementWeb.Models;
 namespace WorkManagementWeb.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20231205135753_DbMigs")]
-    partial class DbMigs
+    [Migration("20231207090836_DBMig")]
+    partial class DBMig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,31 +24,6 @@ namespace WorkManagementWeb.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("WorkManagementWeb.Models.DeleteTaskList", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("DeleteTaskName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JobListName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Time")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("DeleteTaskLists");
-                });
 
             modelBuilder.Entity("WorkManagementWeb.Models.JoblistModels", b =>
                 {
@@ -74,26 +49,6 @@ namespace WorkManagementWeb.Migrations
                     b.ToTable("JoblistModels");
                 });
 
-            modelBuilder.Entity("WorkManagementWeb.Models.Log", b =>
-                {
-                    b.Property<int>("L_ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("L_ID"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("L_ID");
-
-                    b.ToTable("Log");
-                });
-
             modelBuilder.Entity("WorkManagementWeb.Models.TaskListModels", b =>
                 {
                     b.Property<int>("ID")
@@ -102,8 +57,15 @@ namespace WorkManagementWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Done")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime?>("EndTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("JobListName")
                         .IsRequired()
