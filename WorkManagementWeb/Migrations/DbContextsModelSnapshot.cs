@@ -80,6 +80,84 @@ namespace WorkManagementWeb.Migrations
                     b.ToTable("TaskListModels");
                 });
 
+            modelBuilder.Entity("WorkManagementWeb.Models.Team", b =>
+                {
+                    b.Property<int>("T_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_ID"));
+
+                    b.Property<string>("TCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("T_ID");
+
+                    b.ToTable("Team");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.TeamJoblist", b =>
+                {
+                    b.Property<int>("T_JID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_JID"));
+
+                    b.Property<int>("EndTime")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeamCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamJobName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("T_JID");
+
+                    b.ToTable("TeamJoblists");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.TeamTaskName", b =>
+                {
+                    b.Property<int>("T_TID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_TID"));
+
+                    b.Property<string>("Added_by")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TTaskName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("finisher")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("T_TID");
+
+                    b.ToTable("TeamTaskNames");
+                });
+
             modelBuilder.Entity("WorkManagementWeb.Models.User", b =>
                 {
                     b.Property<int>("U_ID")
@@ -100,7 +178,7 @@ namespace WorkManagementWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Team")
+                    b.Property<string>("TeamCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Time")

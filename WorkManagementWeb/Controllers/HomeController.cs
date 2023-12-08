@@ -42,8 +42,10 @@ namespace WorkManagementWeb.Controllers
             var filter = dbContexts.User.FirstOrDefault(x => x.Email == user.Email && x.Password == user.Password);
             if (filter != null) 
             {
+               
                 HttpContext.Session.SetString("Email",user.Email);
-                return RedirectToAction("SeletTeam", "Main");
+                HttpContext.Session.SetString("UserCode",filter.RandomCode);
+                return RedirectToAction("SelectTeam", "Main");
             }
             return View();
         }

@@ -44,14 +44,16 @@
             <div class="col-md-5 custom-div mx-auto">
                 <h2>Ekip İşleri</h2>
                 <p>Bu alan ekip işleri için ayrılmıştır.</p>
-                <button class="btn btn-success custom-button">Ekip İşlerini Görüntüle</button>
+    
+                <a asp-action="TeamJoblist" asp-controller="Team" class="btn btn-success custom-button">Ekip İşlerini Görüntüle</a>
             </div>
         </div>
         <div class="row justify-content-center">
             <!-- Ekip Oluştur Buton Alanı -->
             <div class="col-md-5 custom-div text-center mx-auto">
                 <h2>Ekip Oluştur</h2>
-                <button class="btn btn-warning custom-button">Yeni Ekip Oluştur</button>
+         @*        <button class="btn btn-warning custom-button">Yeni Ekip Oluştur</button> *@
+                <a asp-controller="Team" asp-action="TeamCreate" class="btn btn-warning custom-button">Yeni Ekip Oluştur</a>
             </div>
             <div class="col-md-5 custom-div text-center mx-auto">
                 <h2>Ekip Davetleri</h2>

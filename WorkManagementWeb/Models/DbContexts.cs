@@ -14,7 +14,10 @@ namespace WorkManagementWeb.Models
         public DbSet<TaskListModels> TaskListModels { get; set; }
        
         public DbSet<User> User { get; set; }
-        
+        public DbSet<Team> Team { get; set; }
+        public DbSet<TeamJoblist> TeamJoblists { get; set; }
+        public DbSet<TeamTaskName> TeamTaskNames { get; set; }
+
 
 
 

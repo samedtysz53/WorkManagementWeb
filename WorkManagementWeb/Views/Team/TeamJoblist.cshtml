@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.TeamJoblist>
+
+@{
+    ViewData["Title"] = "TeamJoblist";
+    Layout = "~/Views/Template/TeamTemplate.cshtml";
+}
+
+<h1>TeamJoblist</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamJobName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamJobName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.T_JID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.T_JID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.T_JID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -16,17 +16,7 @@ namespace WorkManagementWeb.Controllers
             //firebaseController=new FirebaseController();
           
         }
-        public IActionResult Index()
-        {
-            if (SessionControl())
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
-        }
+      
 
         [HttpGet]
         public IActionResult Register() 
@@ -124,17 +114,43 @@ namespace WorkManagementWeb.Controllers
         }
 
         [HttpGet]
+        public IActionResult JobDelete(int id) 
+        {
+            if (SessionControl())
+            {
+                var filter = DbContexts.JoblistModels.FirstOrDefault(j => j.ID == id);
+                if (filter != null)
+                {
+                    DbContexts.JoblistModels.Remove(filter);
+                    DbContexts.SaveChanges();
+                }
+                return View("worklist");
+            }
+            return RedirectToAction("Index","Home");
+        }
+
+
+        [HttpGet]
         public IActionResult Day() 
         {
-            var filter = DbContexts.TaskListModels.Where(x => x.Time >= DateTime.Today && x.Time < DateTime.Today.AddDays(1) && x.Done == true).ToList();
+            if (SessionControl())
+            {
+                var filter = DbContexts.TaskListModels.Where(x => x.Time >= DateTime.Today && x.Time < DateTime.Today.AddDays(1) && x.Done == true).ToList();
 
-            return View(filter);
+                return View(filter);
+            }
+            return RedirectToAction("Index", "Home");
         }
        
-        public IActionResult SeletTeam() 
+        public IActionResult SelectTeam() 
         {
+            if (SessionControl())
+            {
 
-            return View();
+
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
         }
         public bool SessionControl()
         {
@@ -245,7 +261,27 @@ namespace WorkManagementWeb.Controllers
             return null;
 
         }
-        
+        [HttpGet]
+        public IActionResult TaskUpdate(int id) 
+        {
+            if (SessionControl())
+            {
+                var filter = DbContexts.TaskListModels.FirstOrDefault(x => x.ID == id);
+                HttpContext.Session.SetInt32("id", id);
+                return View(filter);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpPost]
+        public IActionResult TaskUpdate(string Taskname,string Description)
+        {
+            var id = HttpContext.Session.GetInt32("id");
+            var filter = DbContexts.TaskListModels.FirstOrDefault(x => x.ID == id);
+            filter.TaskName = Taskname;
+            filter.Description = Description;
+            DbContexts.SaveChanges();
+            return RedirectToAction("worklist","Main");
+        }
 
     }
 }

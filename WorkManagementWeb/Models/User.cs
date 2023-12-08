@@ -12,7 +12,7 @@ namespace WorkManagementWeb.Models
         public DateTime Time { get; set; }
 
         public string RandomCode { get; set; }
-        public string? Team {get;set;}
+        public string? TeamCode {get;set;}
 
 
     }

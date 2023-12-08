@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WorkManagementWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class DBmig : Migration
+    public partial class DBMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -45,6 +45,53 @@ namespace WorkManagementWeb.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Team",
+                columns: table => new
+                {
+                    T_ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TeamName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TCode = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Team", x => x.T_ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TeamJoblists",
+                columns: table => new
+                {
+                    T_JID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TeamJobName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TeamCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndTime = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TeamJoblists", x => x.T_JID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TeamTaskNames",
+                columns: table => new
+                {
+                    T_TID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TTaskName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Added_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    finisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TeamTaskNames", x => x.T_TID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "User",
                 columns: table => new
                 {
@@ -55,7 +102,7 @@ namespace WorkManagementWeb.Migrations
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Time = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RandomCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Team = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    TeamCode = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -71,6 +118,15 @@ namespace WorkManagementWeb.Migrations
 
             migrationBuilder.DropTable(
                 name: "TaskListModels");
+
+            migrationBuilder.DropTable(
+                name: "Team");
+
+            migrationBuilder.DropTable(
+                name: "TeamJoblists");
+
+            migrationBuilder.DropTable(
+                name: "TeamTaskNames");
 
             migrationBuilder.DropTable(
                 name: "User");
