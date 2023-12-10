@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WorkManagementWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class DBMig : Migration
+    public partial class DBmig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,7 +51,8 @@ namespace WorkManagementWeb.Migrations
                     T_ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TeamName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TCode = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    TCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MemberCode = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -72,6 +73,20 @@ namespace WorkManagementWeb.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TeamJoblists", x => x.T_JID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TeamMembers",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TeamCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserCode = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TeamMembers", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -101,8 +116,7 @@ namespace WorkManagementWeb.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Time = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    RandomCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TeamCode = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    RandomCode = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -124,6 +138,9 @@ namespace WorkManagementWeb.Migrations
 
             migrationBuilder.DropTable(
                 name: "TeamJoblists");
+
+            migrationBuilder.DropTable(
+                name: "TeamMembers");
 
             migrationBuilder.DropTable(
                 name: "TeamTaskNames");

@@ -8,7 +8,7 @@ namespace WorkManagementWeb.Models
         public int T_ID { get; set; }
         public string TeamName { get; set; }
         public string TCode  { get; set; }
-      
+      public string MemberCode { get; set; }
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using WorkManagementWeb.Models;
 
 namespace WorkManagementWeb.Controllers
@@ -28,8 +29,9 @@ namespace WorkManagementWeb.Controllers
             var filter = dbContext.User.Where(x => x.U_ID == id).FirstOrDefault();
             if (filter != null)
             {
-                var TeamFilter = dbContext.Team.Where(x => x.TCode == filter.TeamCode).ToList();
-                return View(TeamFilter);
+                //var TeamFilter = dbContext.Team.Where(x => x.TCode == filter.TeamCode).ToList();
+                //return View(TeamFilter);
+                return View();
             }
 
             return View();
@@ -60,17 +62,13 @@ namespace WorkManagementWeb.Controllers
             team.TCode = "#" + uniqueCode;
 
             ViewBag.User = HttpContext.Session.GetString("Email") + "(" + HttpContext.Session.GetString("UserCode") + ")";
+            team.MemberCode = HttpContext.Session.GetString("UserCode");
             dbContext.Team.Add(team);
             dbContext.SaveChanges();
-            var Code = HttpContext.Session.GetString("UserCode");
-            var query = dbContext.User.FirstOrDefault(x => x.RandomCode == Code);
-            if (query != null) 
-            {
-                query.TeamCode = team.TCode;
-               
-                dbContext.SaveChanges();
-            }
-            return View();
+            
+                return RedirectToAction("TeamList");
+          
+       
             
         }
         private string GenerateRandomCode()
@@ -88,31 +86,39 @@ namespace WorkManagementWeb.Controllers
 
             return RedirectToAction("SelectTeam", "Main");
         }
+        public IActionResult TeamList() 
+        {
+            var code = HttpContext.Session.GetString("UserCode");
 
+
+
+            if (code != null)
+            {
+
+               
+
+
+                return View(GetTeamList(code));
+            }
+            return View();
+        }
         public IActionResult TeamJoblist() 
         {
             if (SessionControl())
             {
                 var code = HttpContext.Session.GetString("UserCode");
-                
-             
 
-                if (code!=null) 
+
+
+                if (code != null)
                 {
-                    var filter = dbContext.User.FirstOrDefault(x => x.RandomCode == code);
-                    if(filter!= null) 
-                    {
-                        var filter2 = dbContext.Team.Where(x => x.TCode == code).ToList();
-                        return View(filter2);
-                    }
-                    else 
-                    {
-                        return View();
-                    }
+                    var team = dbContext.TeamMembers.Where(x => x.UserCode == code).ToList();
+                    return View(team);
                 }
-              
+
             }
-            return View();
+            var list = dbContext.TeamJoblists.ToList();
+            return View(list);
         }
 
         public bool SessionControl()
@@ -130,6 +136,20 @@ namespace WorkManagementWeb.Controllers
             }
             // Session "Email" değeri boşsa
             return false;
+        }
+
+
+        public List<Team> GetTeamList(string ID)
+        {
+            var filter = dbContext.Team.FirstOrDefault(x => x.MemberCode == ID);
+            if (filter != null)
+            {
+                var select = dbContext.Team.Where(x=>x.MemberCode==ID).ToList();
+
+                return select;
+            }
+            return null;
+
         }
     }
 }

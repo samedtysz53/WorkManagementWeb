@@ -12,8 +12,8 @@ using WorkManagementWeb.Models;
 namespace WorkManagementWeb.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20231208135711_DBMig")]
-    partial class DBMig
+    [Migration("20231210004938_DBmig")]
+    partial class DBmig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,6 +91,10 @@ namespace WorkManagementWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_ID"));
 
+                    b.Property<string>("MemberCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -129,6 +133,27 @@ namespace WorkManagementWeb.Migrations
                     b.HasKey("T_JID");
 
                     b.ToTable("TeamJoblists");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.TeamMembers", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("TeamCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("TeamMembers");
                 });
 
             modelBuilder.Entity("WorkManagementWeb.Models.TeamTaskName", b =>
@@ -179,9 +204,6 @@ namespace WorkManagementWeb.Migrations
 
                     b.Property<string>("RandomCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeamCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Time")
