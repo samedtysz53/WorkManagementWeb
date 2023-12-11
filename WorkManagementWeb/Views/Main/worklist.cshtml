@@ -27,5 +27,13 @@
     }
     }
 </ul> *@
+@using (Html.BeginForm("worklist", "Main", FormMethod.Post))
+{
+    <div class="form-group">
 
+        <input type="text" id="JoblistName" name="JobName" class="form-control" placeholder="İş Adı(*)" required />
+    </div>
+  
+    <button type="submit" class="btn btn-success">Ekle</button>
+}
 

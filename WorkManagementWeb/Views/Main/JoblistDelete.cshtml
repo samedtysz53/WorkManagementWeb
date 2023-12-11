@@ -1,0 +1,43 @@
+﻿@model List<WorkManagementWeb.Models.JoblistModels>
+
+@{
+    ViewData["Title"] = "JoblistDelete";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+<h1>İş Listesi Sil</h1>
+
+<h3>Bunu silmek istediğinizden emin misiniz?</h3>
+<div>
+    @foreach (var jobItem in Model)
+    {
+       
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                İş Adı:
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => jobItem.JobListName)
+            </dd>
+            <dt class="col-sm-2">
+                Tarih:
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => jobItem.Time)
+            </dd>
+            <dt class="col-sm-2">
+                Email:
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => jobItem.Email)
+            </dd>
+        </dl>
+    }
+
+    <form asp-action="JoblistDelete">
+        <input type="hidden" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> 
+      
+    </form>
+</div>

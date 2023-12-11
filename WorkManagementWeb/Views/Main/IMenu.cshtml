@@ -15,9 +15,9 @@
                     <strong>Ekleyen:</strong> @Html.DisplayFor(modelItem => item.Email) <br />
                 </p>
                 <div class="btn-group">
-                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Güncelle</a>
+                    <a asp-action="JobUpdate" asp-route-id="@item.ID" class="btn btn-primary">Güncelle</a>
 
-                    <a asp-action="JobDelete" asp-route-id="@item.ID" name="id" class="btn btn-danger">Sil</a>
+                    <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.ID" name="id" class="btn btn-danger">Sil</a>
                 </div>
             </div>
         }
