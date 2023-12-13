@@ -3,31 +3,39 @@
     Layout = "~/Views/Template/Template.cshtml";
 }
 
-@model List<WorkManagementWeb.Models.JoblistModels>
-<h4  class="text-white">
+@model IEnumerable<WorkManagementWeb.Models.JoblistModels>
+<h4  class="text-black">
 @ViewBag.User
 </h4>
-@Html.Partial("IMenu")
-@* <ul class="list-unstyled">
-     @using(Html.BeginForm("Sonuc","Main",FormMethod.Post)){
+
+
+ 
+
+<div class="list-group">
     @if (Model != null)
     {
         @foreach (var item in Model)
         {
-            <li class="mt-4 d-flex justify-content-center">
-                @Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID }, new { @class = "btn btn-primary w-50 text-center" })
-            </li>
-        
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">@Html.ActionLink(item.JobListName, "Sonuc", new { id = item.ID })</h4>
+
+                <p class="list-group-item-text">
+                    <strong>Time:</strong> @Html.DisplayFor(modelItem => item.Time) <br />
+                    <strong>Ekleyen:</strong> @Html.DisplayFor(modelItem => item.Email) <br />
+                </p>
+                <div class="btn-group">
+                    <a asp-action="JobUpdate" asp-route-id="@item.ID" class="btn btn-primary">Güncelle</a>
+
+                    <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.ID" name="id" class="btn btn-danger">Sil</a>
+                </div>
+            </div>
         }
 
     }
-    else
-    {
+</div> 
 
-    }
-    }
-</ul> *@
-@using (Html.BeginForm("worklist", "Main", FormMethod.Post))
+
+ @using (Html.BeginForm("worklist", "Main", FormMethod.Post))
 {
     <div class="form-group">
 
