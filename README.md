@@ -22,11 +22,20 @@ Bu talimatlar, projeyi yerel bilgisayarınızda çalıştırmak ve geliştirmek 
 
 2. Projeyi Visual Studio İle Açın
 
-3.appsettings.json dosyası içindeki "ConnectionStrings": {
-  "DefaultConnection": "Server=Database_Name;Database=WorkManagement;Encrypt=True;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true",
-  alanına kendi veri tabanı sisteminizin adını giriniz
+3.appsettings.json dosyası içindeki
 
-4.Uygulamayı Başlatmadan önce Package Manager Console üzerinden Database-Update komutunu çalıştırın
+ ```bash
+ "ConnectionStrings": {
+  "DefaultConnection": "Server=Database_Name;Database=WorkManagement;Encrypt=True;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true",
+  ```
+  alanına kendi veri tabanı sisteminizin adını giriniz 
+
+4.Uygulamayı Başlatmadan önce Package Manager Console üzerinden
+ ```bash 
+ Database-Update
+ ```
+komutunu çalıştırın
+
 5. Uygulamayı başlatın:
 
     ```bash
