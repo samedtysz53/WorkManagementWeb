@@ -12,7 +12,7 @@ using WorkManagementWeb.Models;
 namespace WorkManagementWeb.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20231210004938_DBmig")]
+    [Migration("20231211133700_DBmig")]
     partial class DBmig
     {
         /// <inheritdoc />
@@ -58,7 +58,6 @@ namespace WorkManagementWeb.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Done")

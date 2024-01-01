@@ -65,6 +65,7 @@ namespace WorkManagementWeb.Controllers
             return RedirectToAction("Sonuc");
         }
         public IActionResult IMenu() { return PartialView("IMenu"); }
+        [HttpGet]
         public IActionResult worklist() 
         {
             if (SessionControl()) 
@@ -78,6 +79,20 @@ namespace WorkManagementWeb.Controllers
                 return RedirectToAction("Index","Home");
             }
            
+        }
+        [HttpPost]
+        public IActionResult worklist(string JobName) 
+        {
+            JoblistModels joblistModels = new JoblistModels();
+            joblistModels.JobListName=JobName;
+            joblistModels.Email = HttpContext.Session.GetString("Email");
+            joblistModels.Time = DateTime.Now;
+
+            DbContexts.JoblistModels.Add(joblistModels);
+            DbContexts.SaveChanges();
+            return RedirectToAction("worklist", "Main");
+
+            return View();
         }
         [HttpGet]
         public IActionResult JobCreate() 
@@ -114,6 +129,21 @@ namespace WorkManagementWeb.Controllers
         }
 
         [HttpGet]
+        public IActionResult JobDelete(int? id)
+        {
+            if (SessionControl())
+            {
+                var filter = DbContexts.JoblistModels.Where(j => j.ID == id).ToList();
+                if (filter != null)
+                {
+                    return View(filter);
+                }
+                return View("worklist");
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
         public IActionResult JobDelete(int id) 
         {
             if (SessionControl())
@@ -123,10 +153,35 @@ namespace WorkManagementWeb.Controllers
                 {
                     DbContexts.JoblistModels.Remove(filter);
                     DbContexts.SaveChanges();
+                    return View(filter);
                 }
                 return View("worklist");
             }
             return RedirectToAction("Index","Home");
+        }
+
+        [HttpGet]
+        public IActionResult JobUpdate(int id)
+        {
+
+            if (SessionControl())
+            {
+                var filter = DbContexts.JoblistModels.FirstOrDefault(x => x.ID == id);
+                HttpContext.Session.SetInt32("Jobİd", id);
+                return View(filter);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public IActionResult JobUpdate(string JobName) 
+        {
+            var id = HttpContext.Session.GetInt32("Jobİd");
+            var filter = DbContexts.JoblistModels.FirstOrDefault(x => x.ID == id);
+            filter.JobListName = JobName;
+           
+            DbContexts.SaveChanges();
+            return RedirectToAction("worklist", "Main");
         }
 
 
@@ -209,37 +264,48 @@ namespace WorkManagementWeb.Controllers
            
 
         }
-        public void JoblistUpdate(string JName) 
+
+        [HttpGet]
+        public IActionResult JoblistDelete(int id) 
         {
-            var filter = DbContexts.JoblistModels.FirstOrDefault(j => j.JobListName == JName);
-            if (filter != null) 
+            if (SessionControl()) 
             {
-                filter.JobListName = JName;
-
-                var filter2 = DbContexts.TaskListModels.FirstOrDefault(t=>t.JobListName==JName);
-                if(filter2 != null) 
-                {
-
-                filter2.JobListName=JName;
-                DbContexts.SaveChanges();
-                
-                }
-                DbContexts.SaveChanges();
+                var filter = DbContexts.JoblistModels.Where(x=>x.ID==id).ToList();
+                HttpContext.Session.SetInt32("Jobİd",id);
+                return View(filter);
             }
-
+            return RedirectToAction("Index","Home");
         }
-
-        public void JoblistDelte(string JName) 
+        [HttpPost]
+        public IActionResult JoblistDelete()
         {
+            int? jobId = HttpContext.Session.GetInt32("Jobİd");
 
-            var filter = DbContexts.JoblistModels.FirstOrDefault(j=>j.JobListName==JName);
-            if (filter != null) 
+            if (jobId.HasValue)
             {
-                DbContexts.JoblistModels.Remove(filter);
-                DbContexts.SaveChanges();
+                // JoblistModels tablosundan veriyi sil
+                var joblistFilter = DbContexts.JoblistModels.FirstOrDefault(x => x.ID == jobId.Value);
+
+                if (joblistFilter != null)
+                {
+                    DbContexts.JoblistModels.Remove(joblistFilter);
+                    DbContexts.SaveChanges();
+
+                    // TaskListModels tablosundan ilgili verileri sil
+                    var taskListFilters = DbContexts.TaskListModels.Where(t => t.JobListName == joblistFilter.JobListName).ToList();
+
+                    foreach (var taskListFilter in taskListFilters)
+                    {
+                        DbContexts.TaskListModels.Remove(taskListFilter);
+                    }
+
+                    DbContexts.SaveChanges();
+
+                    return RedirectToAction("worklist", "Main");
+                }
             }
 
-
+            return View();
         }
 
         public List<JoblistModels> GetJoblist() 
@@ -267,7 +333,7 @@ namespace WorkManagementWeb.Controllers
             if (SessionControl())
             {
                 var filter = DbContexts.TaskListModels.FirstOrDefault(x => x.ID == id);
-                HttpContext.Session.SetInt32("id", id);
+                HttpContext.Session.SetInt32("TaskİD", id);
                 return View(filter);
             }
             return RedirectToAction("Index", "Home");
@@ -275,7 +341,7 @@ namespace WorkManagementWeb.Controllers
         [HttpPost]
         public IActionResult TaskUpdate(string Taskname,string Description)
         {
-            var id = HttpContext.Session.GetInt32("id");
+            var id = HttpContext.Session.GetInt32("TaskİD");
             var filter = DbContexts.TaskListModels.FirstOrDefault(x => x.ID == id);
             filter.TaskName = Taskname;
             filter.Description = Description;
