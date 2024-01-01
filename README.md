@@ -9,9 +9,7 @@ Bu talimatlar, projeyi yerel bilgisayarınızda çalıştırmak ve geliştirmek 
 ### Gereksinimler
 
 - [.NET 7 SDK](https://dotnet.microsoft.com/download)
-- appsettings.json dosyası içindeki "ConnectionStrings": {
-  "DefaultConnection": "Server=Database_Name;Database=WorkManagement;Encrypt=True;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true",
-  alanına kendi veri tabanı sisteminizin adını giriniz
+  
 
 
 ### Kurulum
@@ -22,19 +20,20 @@ Bu talimatlar, projeyi yerel bilgisayarınızda çalıştırmak ve geliştirmek 
     git clone https://github.com/kullanici/adini-buraya-yaz
     ```
 
-2. Proje dizinine gidin:
+2. Projeyi Visual Studio İle Açın
 
-    ```bash
-    cd adini-buraya-yaz
-    ```
-3.Uygulamayı Başlatmadan önce Package Manager Console üzerinden Database-Update komutunu çalıştırın
-4. Uygulamayı başlatın:
+3.appsettings.json dosyası içindeki "ConnectionStrings": {
+  "DefaultConnection": "Server=Database_Name;Database=WorkManagement;Encrypt=True;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true",
+  alanına kendi veri tabanı sisteminizin adını giriniz
+
+4.Uygulamayı Başlatmadan önce Package Manager Console üzerinden Database-Update komutunu çalıştırın
+5. Uygulamayı başlatın:
 
     ```bash
     dotnet run
     ```
 
-5. Tarayıcınızda `https://localhost:5001` adresine giderek uygulamayı görüntüleyin.
+6. Tarayıcınızda `https://localhost:5001` adresine giderek uygulamayı görüntüleyin.
 
 ## Kullanım
 
