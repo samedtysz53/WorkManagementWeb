@@ -12,7 +12,7 @@
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_DbContextTypeFullName>WorkManagementWeb.Models.DbContexts</WebStackScaffolding_DbContextTypeFullName>
     <NameOfLastUsedPublishProfile>C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\Properties\PublishProfiles\IISProfile.pubxml</NameOfLastUsedPublishProfile>
-    <WebStackScaffolding_LayoutPageFile>~/Views/Template/Template.cshtml</WebStackScaffolding_LayoutPageFile>
+    <WebStackScaffolding_LayoutPageFile>~/Views/Template/TeamTemplate.cshtml</WebStackScaffolding_LayoutPageFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

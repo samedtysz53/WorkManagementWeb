@@ -151,5 +151,75 @@ namespace WorkManagementWeb.Controllers
             return null;
 
         }
+
+        [HttpGet]
+        public IActionResult TGrpup(int id)
+        {
+
+            if (SessionControl())
+            {
+                var filter = dbContext.Team.FirstOrDefault(x => x.T_ID == id);
+                HttpContext.Session.SetInt32("Tid", id);
+                return View(filter);
+            }
+            return RedirectToAction("TeamList", "Team");
+        }
+
+        [HttpPost]
+        public IActionResult TGrpup(string TeamName)
+        {
+            var id = HttpContext.Session.GetInt32("Tid");
+            var filter = dbContext.Team.FirstOrDefault(x => x.T_ID == id);
+            filter.TeamName = TeamName;
+
+            dbContext.SaveChanges();
+            return RedirectToAction("TeamList", "Team");
+        }
+
+
+        [HttpGet]
+        public IActionResult TeamListDelete(int id)
+        {
+            if (SessionControl())
+            {
+                var filter = dbContext.Team.Where(x => x.T_ID == id).ToList();
+                HttpContext.Session.SetInt32("Tid", id);
+                return View(filter);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpPost]
+        public IActionResult TeamListDelete()
+        {
+            //int? jobId = HttpContext.Session.GetInt32("Tid");
+
+            //if (jobId.HasValue)
+            //{
+            //    // JoblistModels tablosundan veriyi sil
+            //    var joblistFilter = dbContext.Team.FirstOrDefault(x => x.T_ID == jobId.Value);
+
+            //    if (joblistFilter != null)
+            //    {
+            //        dbContext.Team.Remove(joblistFilter);
+            //        dbContext.SaveChanges();
+
+            //        // TaskListModels tablosundan ilgili verileri sil
+            //        var taskListFilters = dbContext.TeamJoblists.Where(t => t.TeamJobName == joblistFilter.t).ToList();
+
+            //        foreach (var taskListFilter in taskListFilters)
+            //        {
+            //            dbContext.TaskListModels.Remove(taskListFilter);
+            //        }
+
+            //        dbContext.SaveChanges();
+
+            //        return RedirectToAction("worklist", "Main");
+            //    }
+            //}
+            //hatalı kod düzeltilecek
+            return View();
+        }
+
+
     }
 }

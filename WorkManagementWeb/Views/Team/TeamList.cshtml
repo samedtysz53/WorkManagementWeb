@@ -1,43 +1,52 @@
-﻿@model List<Team>
-
+﻿  @model IEnumerable<WorkManagementWeb.Models.Team>
 @{
-    ViewData["Title"] = "TeamList";
-    Layout = "~/Views/Template/TeamTemplate.cshtml";
+    ViewData["Title"] = "WorkList";
+    Layout = "~/Views/Template/Template.cshtml";
 }
 
-<h1>Ekipler</h1>
 
- 
- 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                
-            </th>
-            <th>
-               
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @if(Model !=null){
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TCode)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.T_ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.T_ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.T_ID">Delete</a>
-            </td>
-        </tr>
-}
+
+
+
+<h4 class="text-black">
+
+    @ViewBag.User
+</h4>
+
+
+
+
+<div class="list-group">
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">@Html.ActionLink(item.TeamName, "Sonuc", new { id = item.T_ID })</h4>
+
+                <p class="list-group-item-text">
+                    <h6 class="list-group-item-heading">@item.TCode</h6>
+                    <h6 class="list-group-item-heading">Oluşturan Üye:@item.MemberCode</h6>
+                   
+                </p>
+                <div class="btn-group">
+
+
+
+                    <a asp-action="TGrpup" asp-route-id="@item.T_ID" class="btn btn-primary">Güncelle</a>
+
+                    <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.T_ID" name="id" class="btn btn-danger">Sil</a>
+
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+
+    }
+
+</div>
+
+
+
+
+ 
+
