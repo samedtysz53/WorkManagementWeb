@@ -191,35 +191,49 @@ namespace WorkManagementWeb.Controllers
         [HttpPost]
         public IActionResult TeamListDelete()
         {
-            //int? jobId = HttpContext.Session.GetInt32("Tid");
+            int? Tıd = HttpContext.Session.GetInt32("Tid");
 
-            //if (jobId.HasValue)
-            //{
-            //    // JoblistModels tablosundan veriyi sil
-            //    var joblistFilter = dbContext.Team.FirstOrDefault(x => x.T_ID == jobId.Value);
+            if (Tıd.HasValue)
+            {
+                var query = dbContext.Team.Where(x=>x.T_ID==Tıd).FirstOrDefault();
+                dbContext.Remove(query);
+                if(query!=null)
+                {
+                    var TeamJoblistQuery = dbContext.TeamJoblists.Where(x=>x.TeamCode==query.TCode).FirstOrDefault();
+                    dbContext.Remove(TeamJoblistQuery);
 
-            //    if (joblistFilter != null)
-            //    {
-            //        dbContext.Team.Remove(joblistFilter);
-            //        dbContext.SaveChanges();
+                    if (TeamJoblistQuery != null) 
+                    {
+                        //var TeamTaskList = dbContext.TeamTaskNames.Where(x=>x.);
+                    }
 
-            //        // TaskListModels tablosundan ilgili verileri sil
-            //        var taskListFilters = dbContext.TeamJoblists.Where(t => t.TeamJobName == joblistFilter.t).ToList();
+                }
 
-            //        foreach (var taskListFilter in taskListFilters)
-            //        {
-            //            dbContext.TaskListModels.Remove(taskListFilter);
-            //        }
 
-            //        dbContext.SaveChanges();
-
-            //        return RedirectToAction("worklist", "Main");
-            //    }
-            //}
+            }
             //hatalı kod düzeltilecek
             return View();
         }
+        [HttpGet]
+        public IActionResult TeamJobList(int id)
+        {
+            
+            return View();
 
 
+        }
+
+        [HttpGet]
+        public IActionResult TJoblistSonuc(string id)
+        {
+            if (SessionControl()) 
+            {
+              var list=dbContext.TeamJoblists.Where(x=>x.TeamCode==id).ToList();
+                return View(list);
+            }
+
+            return View("Index","Home");
+
+        }
     }
 }

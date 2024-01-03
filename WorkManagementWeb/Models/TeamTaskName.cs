@@ -10,7 +10,6 @@ namespace WorkManagementWeb.Models
         public DateTime Time { get; set; }
         public string Added_by { get; set; }
 
-        public string? finisher { get; set; }
-        public DateTime? EndTime { get; set; }
+        public string TeamJobName { get; set; }
     }
 }

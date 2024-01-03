@@ -22,7 +22,7 @@
         @foreach (var item in Model)
         {
             <div class="list-group-item">
-                <h4 class="list-group-item-heading">@Html.ActionLink(item.TeamName, "Sonuc", new { id = item.T_ID })</h4>
+                <h4 class="list-group-item-heading">@Html.ActionLink(item.TeamName, "TJoblistSonuc", new { id = item.T_ID })</h4>
 
                 <p class="list-group-item-text">
                     <h6 class="list-group-item-heading">@item.TCode</h6>
