@@ -98,8 +98,7 @@ namespace WorkManagementWeb.Migrations
                     TTaskName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Time = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Added_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    finisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    TeamJobName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

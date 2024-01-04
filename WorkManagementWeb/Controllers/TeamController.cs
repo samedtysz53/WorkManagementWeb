@@ -156,8 +156,56 @@ namespace WorkManagementWeb.Controllers
 
         return View();
         }
+<<<<<<< HEAD
+
+=======
+        [HttpPost]
+        public IActionResult TeamListDelete()
+        {
+            int? Tıd = HttpContext.Session.GetInt32("Tid");
+
+            if (Tıd.HasValue)
+            {
+                var query = dbContext.Team.Where(x=>x.T_ID==Tıd).FirstOrDefault();
+                dbContext.Remove(query);
+                if(query!=null)
+                {
+                    var TeamJoblistQuery = dbContext.TeamJoblists.Where(x=>x.TeamCode==query.TCode).FirstOrDefault();
+                    dbContext.Remove(TeamJoblistQuery);
+
+                    if (TeamJoblistQuery != null) 
+                    {
+                        //var TeamTaskList = dbContext.TeamTaskNames.Where(x=>x.);
+                    }
+
+                }
 
 
+            }
+            //hatalı kod düzeltilecek
+            return View();
+        }
+        [HttpGet]
+        public IActionResult TeamJobList(int id)
+        {
+            
+            return View();
+>>>>>>> a7391be64bdda0fa4c20dcef1b06dd374c98b405
 
+
+        }
+
+        [HttpGet]
+        public IActionResult TJoblistSonuc(string id)
+        {
+            if (SessionControl()) 
+            {
+              var list=dbContext.TeamJoblists.Where(x=>x.TeamCode==id).ToList();
+                return View(list);
+            }
+
+            return View("Index","Home");
+
+        }
     }
 }

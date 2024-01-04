@@ -164,18 +164,16 @@ namespace WorkManagementWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("EndTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("TTaskName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamJobName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("finisher")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("T_TID");
 

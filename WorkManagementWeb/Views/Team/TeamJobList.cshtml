@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.TeamJoblist>
+
+@{
+    ViewData["Title"] = "TeamJobList";
+    Layout = "~/Views/Template/TeamTemplate.cshtml";
+}
+
+<h1>TeamJobList</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        <div class="list-group-item">
+            <h4 class="list-group-item-heading">@Html.ActionLink(item.TeamJobName, "Sonuc", new { id = item.T_JID })</h4>
+
+            <p class="list-group-item-text">
+                <strong>Time:</strong> @Html.DisplayFor(modelItem => item.Time) <br />
+               
+            </p>
+            <div class="btn-group">
+
+
+
+                <a asp-action="JobUpdate" asp-route-id="@item.T_JID" class="btn btn-primary">Güncelle</a>
+
+                <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.T_JID" name="id" class="btn btn-danger">Sil</a>
+
+            </div>
+        </div>
+    }
+
+}
