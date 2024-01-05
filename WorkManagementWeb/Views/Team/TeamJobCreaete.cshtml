@@ -1,0 +1,49 @@
+﻿@model WorkManagementWeb.Models.TeamJoblist
+
+@{
+    ViewData["Title"] = "TeamJobCreaete";
+    Layout = "~/Views/Template/TeamTemplate.cshtml";
+}
+
+<h1>TeamJobCreaete</h1>
+
+<h4>TeamJoblist</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="TeamJobCreaete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TeamJobName" class="control-label"></label>
+                <input asp-for="TeamJobName" class="form-control" />
+                <span asp-validation-for="TeamJobName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamCode" class="control-label"></label>
+                <input asp-for="TeamCode" class="form-control" />
+                <span asp-validation-for="TeamCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndTime" class="control-label"></label>
+                <input asp-for="EndTime" class="form-control" />
+                <span asp-validation-for="EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -82,36 +82,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/SelectedItem.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxTZWxlY3RlZEl0ZW0uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TeamCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TeamJobList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtSm9iTGlzdC5jc2h0bWw=
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TeamJobCreaete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtSm9iQ3JlYWV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TeamList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtTGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TGrpup.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUR3JwdXAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TJoblistSonuc.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUSm9ibGlzdFNvbnVjLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Team/TJobUpdate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUSm9iVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Template/TeamTemplate.cshtml]
