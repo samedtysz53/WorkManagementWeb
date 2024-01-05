@@ -12,8 +12,8 @@ using WorkManagementWeb.Models;
 namespace WorkManagementWeb.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20240103061624_DBmig")]
-    partial class DBmig
+    [Migration("20240105131846_DbMig")]
+    partial class DbMig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -114,9 +114,6 @@ namespace WorkManagementWeb.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_JID"));
-
-                    b.Property<int>("EndTime")
-                        .HasColumnType("int");
 
                     b.Property<string>("TeamCode")
                         .IsRequired()

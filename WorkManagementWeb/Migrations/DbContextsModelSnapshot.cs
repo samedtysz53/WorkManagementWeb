@@ -112,9 +112,6 @@ namespace WorkManagementWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_JID"));
 
-                    b.Property<int>("EndTime")
-                        .HasColumnType("int");
-
                     b.Property<string>("TeamCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WorkManagementWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class DBmig : Migration
+    public partial class DbMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -67,8 +67,7 @@ namespace WorkManagementWeb.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TeamJobName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TeamCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Time = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndTime = table.Column<int>(type: "int", nullable: false)
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

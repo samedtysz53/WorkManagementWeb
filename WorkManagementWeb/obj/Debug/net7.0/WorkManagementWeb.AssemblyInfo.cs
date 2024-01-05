@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkManagementWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7391be64bdda0fa4c20dcef1b06dd374c98b405")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab0ee81544d4517bae7bce638fee370c29a51c3f")]
->>>>>>> e1c61019046274e44b629522ef33d33da9749a30
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6150b421531cca6bfa7be3b553ef727702c92f22")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkManagementWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkManagementWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

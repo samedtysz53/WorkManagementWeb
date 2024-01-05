@@ -349,5 +349,10 @@ namespace WorkManagementWeb.Controllers
             return RedirectToAction("worklist","Main");
         }
 
+        [HttpGet]
+        public IActionResult TworklistC(int id) 
+        {
+            return View();
+        }
     }
 }
