@@ -19,8 +19,25 @@ namespace WorkManagementWeb.Controllers
            
 
         }
+<<<<<<< HEAD
    
       
+=======
+    
+        public IActionResult SelectedItem() 
+        {
+            var id = HttpContext.Session.GetInt32("id");
+            var filter = dbContext.User.Where(x => x.U_ID == id).FirstOrDefault();
+            if (filter != null)
+            {
+                //var TeamFilter = dbContext.Team.Where(x => x.TCode == filter.TeamCode).ToList();
+                //return View(TeamFilter);
+                return View();
+            }
+
+            return View();
+        }
+>>>>>>> e1c61019046274e44b629522ef33d33da9749a30
 
         [HttpGet]
         public IActionResult TeamCreate() 
@@ -83,7 +100,11 @@ namespace WorkManagementWeb.Controllers
             }
             return View();
         }
+<<<<<<< HEAD
     
+=======
+       
+>>>>>>> e1c61019046274e44b629522ef33d33da9749a30
 
         public bool SessionControl()
         {
@@ -116,12 +137,73 @@ namespace WorkManagementWeb.Controllers
 
         }
 
+<<<<<<< HEAD
 
 
         [HttpGet]
         public IActionResult TeamJobCreaete()
         {
+=======
+        [HttpGet]
+        public IActionResult GetTeamJob(int id) 
+        {
+            if (SessionControl()) 
+            {
+                var filter = dbContext.Team.Where(x=>x.T_ID==id).FirstOrDefault();
+                if (filter != null) 
+                {
+                    var query = dbContext.TeamJoblists.Where(x=>x.TeamCode==filter.TCode).ToList();
+                    return View(query);
+                }
+
+                return View(null);
+            }
+            return View("Index","Home");
+        }
+
+
+        [HttpGet]
+        public IActionResult JobCreate() 
+        {
+
+        return View();
+        }
+<<<<<<< HEAD
+
+=======
+        [HttpPost]
+        public IActionResult TeamListDelete()
+        {
+            int? Tıd = HttpContext.Session.GetInt32("Tid");
+
+            if (Tıd.HasValue)
+            {
+                var query = dbContext.Team.Where(x=>x.T_ID==Tıd).FirstOrDefault();
+                dbContext.Remove(query);
+                if(query!=null)
+                {
+                    var TeamJoblistQuery = dbContext.TeamJoblists.Where(x=>x.TeamCode==query.TCode).FirstOrDefault();
+                    dbContext.Remove(TeamJoblistQuery);
+
+                    if (TeamJoblistQuery != null) 
+                    {
+                        //var TeamTaskList = dbContext.TeamTaskNames.Where(x=>x.);
+                    }
+
+                }
+
+
+            }
+            //hatalı kod düzeltilecek
             return View();
+        }
+        [HttpGet]
+        public IActionResult TeamJobList(int id)
+        {
+            
+>>>>>>> e1c61019046274e44b629522ef33d33da9749a30
+            return View();
+>>>>>>> a7391be64bdda0fa4c20dcef1b06dd374c98b405
 
         }
 
