@@ -178,7 +178,7 @@ namespace WorkManagementWeb.Controllers
              
             dbContext.TeamJoblists.Add(taskListModels);
             dbContext.SaveChanges();
-            return RedirectToAction("Sonuc");
+            return RedirectToAction("GetTeamJob");
         }
 
         [HttpGet]
@@ -263,18 +263,18 @@ namespace WorkManagementWeb.Controllers
         {
             var JID = HttpContext.Session.GetInt32("ID");
 
-            var filter = dbContext.Team.Where(x => x.T_ID == JID).FirstOrDefault();
+            var filter = dbContext.TeamJoblists.Where(x => x.T_JID == JID).FirstOrDefault();
 
 
             TeamTaskName TeamTaskName = new TeamTaskName();
             TeamTaskName.TTaskName = taskname;
-            TeamTaskName.TeamID = filter.T_ID;
+            TeamTaskName.TeamID = filter.T_JID;
             TeamTaskName.Time = DateTime.Now;
             TeamTaskName.Done = true;
             TeamTaskName.Added_by = HttpContext.Session.GetString("Email");
             dbContext.TeamTaskNames.Add(TeamTaskName);
             dbContext.SaveChanges();
-            return RedirectToAction("Sonuc");
+            return RedirectToAction("TSonuc");
         }
 
         public List<TeamTaskName> getTasklist(int ID)
