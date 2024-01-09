@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.TeamTaskName>
+
+@{
+    ViewData["Title"] = "TSonuc";
+    Layout = "~/Views/Template/TeamTemplate.cshtml";
+}
+
+<h1>Sonuc</h1>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    İş Adı
+                </th>
+                <th>
+                    Tarih
+                </th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TTaskName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                      
+                    <td>
+                        <a asp-route-id="@item.T_TID" asp-action="TaskUpdate" class="btn btn-primary">Güncelle</a>
+                        <a asp-action="TaskEnd" asp-route-id="@item.T_TID" class="btn btn-danger">Bitir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @using (Html.BeginForm("TSonuc", "Team", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="taskname">İş Adı(*):</label>
+            <input type="text" id="taskname" name="taskname" class="form-control" placeholder="İş Adı" required />
+        </div>
+        <div class="form-group">
+
+            <label>Açıklama</label>
+            <textarea class="form-control" placeholder="Açıklama" name="Description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Ekle</button>
+    }
+
+}

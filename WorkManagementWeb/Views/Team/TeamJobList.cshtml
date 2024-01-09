@@ -1,4 +1,4 @@
-﻿@model WorkManagementWeb.Models.TeamJoblist
+﻿@model IEnumerable<WorkManagementWeb.Models.TeamJoblist>
 
 @{
     ViewData["Title"] = "TeamJobList";
@@ -7,28 +7,48 @@
 
 <h1>TeamJobList</h1>
 
-<h4>TeamJoblist</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="TeamJobList">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="TeamJobName" class="control-label"></label>
-                <input asp-for="TeamJobName" class="form-control" />
-                <span asp-validation-for="TeamJobName" class="text-danger"></span>
+
+<div class="list-group">
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">@Html.ActionLink(item.TeamJobName, "Sonuc", new { id = item.T_JID })</h4>
+
+                <p class="list-group-item-text">
+                    <strong>Time:</strong> @Html.DisplayFor(modelItem => item.Time) <br />
+
+                </p>
+                <div class="btn-group">
+
+
+
+                    <a asp-action="JobUpdate" asp-route-id="@item.T_JID" class="btn btn-primary">Güncelle</a>
+
+                    <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.T_JID" name="id" class="btn btn-danger">Sil</a>
+
+                </div>
             </div>
-             
-           
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+        }
+
+    }
+
 </div>
 
-<div>
-    <a asp-action="GetTeamJob">Geri Dön</a>
-</div>
+
+@using (Html.BeginForm("TeamJobList", "Team", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="taskname">İş Adı(*):</label>
+        <input type="text" id="taskname" name="taskname" class="form-control" placeholder="İş Adı" required />
+    </div>
+    <div class="form-group">
+
+        <label>Açıklama</label>
+        <textarea class="form-control" placeholder="Açıklama" name="Description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Ekle</button>
+}
 
 

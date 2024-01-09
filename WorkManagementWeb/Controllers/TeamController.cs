@@ -83,6 +83,7 @@ namespace WorkManagementWeb.Controllers
 
         public IActionResult TeamList()
         {
+            if (SessionControl()) { 
             var code = HttpContext.Session.GetString("UserCode");
 
 
@@ -95,7 +96,12 @@ namespace WorkManagementWeb.Controllers
 
                 return View(GetTeamList(code));
             }
+            }
+            else { 
+            return View("Index","Home");
+            }
             return View();
+                 
         }
 
         public bool SessionControl()
@@ -147,16 +153,35 @@ namespace WorkManagementWeb.Controllers
                     {
                         var query = dbContext.TeamJoblists.Where(x => x.TeamCode == filter.TCode).ToList();
                     HttpContext.Session.SetInt32("Stid",id);
-                        return View(query);
+                    HttpContext.Session.SetInt32("ID", id);
+                    return View(query);
                     }
 
                     return View(null);
                 }
                 return View("Index", "Home");
             }
+        [HttpPost]
+        
+        public IActionResult GetTeamJob(string taskname, string Description)
+        {
+            var JID = HttpContext.Session.GetInt32("ID");
+
+            var filter = dbContext.Team.FirstOrDefault(x => x.T_ID == JID);
 
 
-            [HttpGet]
+            TeamJoblist taskListModels = new TeamJoblist();
+            taskListModels.TeamJobName = taskname;
+            taskListModels.TeamCode=filter.TCode;
+            taskListModels.Time = DateTime.Now;
+          
+             
+            dbContext.TeamJoblists.Add(taskListModels);
+            dbContext.SaveChanges();
+            return RedirectToAction("Sonuc");
+        }
+
+        [HttpGet]
             public IActionResult JobCreate()
             {
 
@@ -217,9 +242,54 @@ namespace WorkManagementWeb.Controllers
 
 
         }
+        [HttpGet]
+        public IActionResult TSonuc(int id)
+        {
+            if (SessionControl())
+            {
+                HttpContext.Session.SetInt32("ID", id);
+ 
+
+                return View(getTasklist(id));
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult TSonuc(string taskname, string Description)
+        {
+            var JID = HttpContext.Session.GetInt32("ID");
+
+            var filter = dbContext.Team.Where(x => x.T_ID == JID).FirstOrDefault();
 
 
+            TeamTaskName TeamTaskName = new TeamTaskName();
+            TeamTaskName.TTaskName = taskname;
+            TeamTaskName.TeamID = filter.T_ID;
+            TeamTaskName.Time = DateTime.Now;
+            TeamTaskName.Done = true;
+            TeamTaskName.Added_by = HttpContext.Session.GetString("Email");
+            dbContext.TeamTaskNames.Add(TeamTaskName);
+            dbContext.SaveChanges();
+            return RedirectToAction("Sonuc");
+        }
 
+        public List<TeamTaskName> getTasklist(int ID)
+        {
+            var filter = dbContext.TeamJoblists.FirstOrDefault(x => x.T_JID == ID);
+            if (filter != null)
+            {
+                var list = dbContext.TeamTaskNames.Where(x => x.TeamID == filter.T_JID && x.Done == true).ToList();
+
+
+                return list;
+            }
+            return null;
+
+        }
 
     }
 
