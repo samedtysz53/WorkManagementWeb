@@ -37,10 +37,10 @@
 
 
 
-                    <a asp-action="TGrpup" asp-route-id="@item.T_ID" class="btn btn-primary">Güncelle</a>
+                    <a asp-action="TUpdate" asp-controller="Team" asp-route-id="@item.T_ID" class="btn m-1 rounded-4 btn-primary">Güncelle</a>
 
-                    <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.T_ID" name="id" class="btn btn-danger">Sil</a>
-
+                    <a asp-action="JoblistDelete" asp-controller="Main" asp-route-id="@item.T_ID" name="id" class="btn m-1 rounded-4 btn-danger">Sil</a>
+                    <a asp-controller="" asp-action="" asp-route-id="@item.T_ID" class="nav-item btn btn-primary m-1 rounded-4 nav-link">Üye Davet Et</a>
                 </div>
             </div>
         }
