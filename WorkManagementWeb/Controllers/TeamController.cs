@@ -290,7 +290,27 @@ namespace WorkManagementWeb.Controllers
             return null;
 
         }
+        [HttpGet]
+        public IActionResult TUpdate(int id) 
+        {
+            if (SessionControl())
+            {
+                var filter = dbContext.Team.FirstOrDefault(x => x.T_ID == id);
+                HttpContext.Session.SetInt32("TeamID", id);
+                return View(filter);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpPost]
+        public IActionResult TUpdate(string TeamName)
+        {
+            var id = HttpContext.Session.GetInt32("TeamID");
+            var filter = dbContext.Team.FirstOrDefault(x => x.T_ID == id);
+            filter.TeamName = TeamName;
 
+            dbContext.SaveChanges();
+            return RedirectToAction("TeamList", "Team");
+        }
     }
 
 }
