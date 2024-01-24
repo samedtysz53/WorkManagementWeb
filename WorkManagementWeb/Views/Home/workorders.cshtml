@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.IsEmri>
+
+@{
+    ViewData["Title"] = "workorders";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+<h1>workorders</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MusteriID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baslik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Durum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OlusturmaTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BitisTarihi)
+            </th>
+             
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MusteriID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Baslik)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aciklama)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Durum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OlusturmaTarihi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BitisTarihi)
+                    </td>
+                    
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IsEmriID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.IsEmriID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IsEmriID">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

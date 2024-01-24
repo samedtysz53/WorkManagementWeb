@@ -5,10 +5,14 @@
     Layout = "~/Views/Template/Template.cshtml";
 }
 
-<h1>Gorev</h1>
+
+
+<h6 class="card w-25"> Kullanıcı:@ViewBag.User<br />  Birim:@ViewBag.Unit</h6>
+ 
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="GorevAdd" class="btn btn-danger">İş Oluştur</a>
 </p>
 <table class="table">
     <thead>
@@ -34,14 +38,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.BitisTarihi)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DigerIlgiliBilgiler)
-            </th>
+           
             <th></th>
         </tr>
     </thead>
     <tbody>
          
+        @if(Model!=null){
             @foreach (var item in Model)
             {
                 <tr>
@@ -66,16 +69,14 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.BitisTarihi)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DigerIlgiliBilgiler)
-                    </td>
+                    
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.GorevID">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.GorevID">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.GorevID">Delete</a>
                     </td>
                 </tr>
-            
+            }
         }
     </tbody>
 </table>

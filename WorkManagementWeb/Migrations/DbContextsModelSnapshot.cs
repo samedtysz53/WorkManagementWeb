@@ -138,7 +138,14 @@ namespace WorkManagementWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MusteriID"));
 
-                    b.Property<string>("DigerIlgiliBilgiler")
+                    b.Property<string>("Adres")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DogumTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -147,6 +154,10 @@ namespace WorkManagementWeb.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MusteriAdi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefon")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -176,6 +187,10 @@ namespace WorkManagementWeb.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("unit")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

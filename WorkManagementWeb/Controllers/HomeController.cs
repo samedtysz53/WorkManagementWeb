@@ -11,7 +11,7 @@ namespace WorkManagementWeb.Controllers
 {
     public class HomeController : Controller
     {
-
+        
         private readonly ILogger<HomeController> _logger;
 
 
@@ -44,6 +44,9 @@ namespace WorkManagementWeb.Controllers
             {
                
                 HttpContext.Session.SetInt32("ID",user.KullaniciID);
+                HttpContext.Session.SetString("Eposta", user.Email);
+                var filter1= dbContexts.Users.Where(x=>x.Email==user.Email).FirstOrDefault();
+                HttpContext.Session.SetString("Unit", filter1.unit);
               
                 return RedirectToAction("Gorev", "Home");
             }
@@ -51,13 +54,109 @@ namespace WorkManagementWeb.Controllers
         }
         public IActionResult Gorev() 
         {
+            ViewBag.User = HttpContext.Session.GetString("Eposta");
+            ViewBag.Unit = HttpContext.Session.GetString("Unit");
+            var filter = dbContexts.Gorev.ToList();
+            //kullanıcının birimine göre veri çeksin
+            return View(filter);
+        }
+        public IActionResult GorevAdd()
+        {
+            ViewBag.User = HttpContext.Session.GetString("Eposta");
+            ViewBag.Unit = HttpContext.Session.GetString("Unit");
+ 
+
             return View();
         }
+
         [HttpGet]
-        public IActionResult register() 
+        public IActionResult register()
         {
             return View();
         }
-      
+        [HttpPost]
+        public IActionResult register(User user)
+        {
+            dbContexts.Users.Add(user);
+            dbContexts.SaveChanges();
+            HttpContext.Session.SetString("Eposta",user.Email);
+
+            RedirectToAction("Gorev", "Home");
+            return View();
+        }
+        public IActionResult UserList() 
+        {
+            if (CheckRole())
+            {
+                var list = dbContexts.Users.ToList();
+                return View(list);
+            }
+            else
+            {
+                ViewBag.Per = "Bu Sayfayı Görüntülemeye Yetkiniz Yok";
+            }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult UserAdd() 
+        {
+            if (CheckRole())
+            {
+                return View();
+            }
+            else
+            {
+                ViewBag.Per = "Bu Sayfayı Görüntülemeye Yetkiniz Yok";
+            }
+            return View();
+        }
+        [HttpPost]
+        public IActionResult UserAdd(User user)
+        {
+          
+                var query=dbContexts.Users.Where(x => x.Email==user.Email).FirstOrDefault();
+            if (query == null) 
+            {
+                dbContexts.Users.Add(user);
+                dbContexts.SaveChanges();
+                RedirectToAction("UserList", "Home");
+            }
+            else 
+            {
+                ViewBag.Error = "Bu Mail Adresi Kullanımda";
+            }
+            
+           
+            return View();
+        }
+
+        public IActionResult Customer()
+        {
+          
+            if(CheckRole())
+            {
+                
+                return View(dbContexts.Musteri.ToList());
+            }
+            ViewBag.Per = "Bu Sayfayı Görüntülemeye Yetkiniz Yok";
+            
+            return View();
+          
+        }
+        public IActionResult workorders() 
+        {
+            return View();
+        }
+
+        public bool CheckRole() 
+        {
+            var filter = dbContexts.Users.Where(x => x.Email == HttpContext.Session.GetString("Eposta")).FirstOrDefault();
+            if (filter.Roles == "Admin" || filter.Roles == "Müdür" || filter.Roles == "Yonetici")
+            {
+
+               return true;
+            }
+            return false;
+        }
     }
 }

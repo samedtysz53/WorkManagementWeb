@@ -101,18 +101,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav">
-                <a asp-controller="Main" asp-action="Day" class="nav-item nav-link">Günüm</a>
+                <a asp-controller="Home" asp-action="UserList" class="nav-item nav-link">Kullanıcılar</a>
               
-                <a asp-controller="Main" asp-action="CompletedTask" class="nav-item nav-link">Tamamlanan Görevler</a>
-                <a asp-controller="Main" asp-action="worklist" class="nav-item nav-link">İş Listeleri</a>
+           @*      <a asp-controller="Home" asp-action="Customer" class="nav-item nav-link">Müşteriler</a> *@
+                <a asp-controller="Home" asp-action="workorders" class="nav-item nav-link">İş Emirleri</a>
  
-                <a asp-controller="Main" asp-action="JobCreate" class="nav-item nav-link">İş Listesi Oluştur</a>
+                <a asp-controller="Home" asp-action="Gorev" class="nav-item nav-link">Görevler</a>
  
               
  
-                <a asp-controller="Main" asp-action="SelectTeam" class="nav-item nav-link">Seçim</a>
+                <a asp-controller="Home" asp-action="SelectTeam" class="nav-item nav-link">Zaman Takibi</a>
               
-                <a asp-controller="Main" asp-action="CloseD" class="nav-item nav-link">Çıkış yap</a>
+                <a asp-controller="Home" asp-action="CloseD" class="nav-item nav-link">Malzeme Stok</a>
             </div>
         </div>
     </nav>

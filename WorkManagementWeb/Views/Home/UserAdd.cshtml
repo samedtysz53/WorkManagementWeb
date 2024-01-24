@@ -1,0 +1,82 @@
+﻿@model WorkManagementWeb.Models.User
+
+@{
+    ViewData["Title"] = "UserAdd";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+ <h2> @ViewBag.Per</h2>
+@if (ViewBag.Per == "Bu Sayfayı Görüntülemeye Yetkiniz Yok")
+{
+    
+}else{
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UserAdd">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h6 class="text-danger">  @ViewBag.Error !! <br /></h6>
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Roles" class="control-label"></label>
+          
+
+                <!-- Dropdown Menüsü -->
+                <select asp-for="Roles" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="Yönetici">Yönetici</option>
+                    <option value="Müdür">Müdür</option>
+                    <option value="Personel">Personel</option>
+                    <option value="Satış Sorumlusu">Satış Sorumlusu</option>
+                    <option value="Bilgi İşlem">Bilgi İşlem</option>
+                    <option value="Satın Alma">Satın Alma Sorumlusu</option>
+                    <option value="Depo Personeli">Depo Personeli</option>
+
+                </select>
+            </div>
+                <div class="form-group">
+                    <label asp-for="unit" class="control-label"></label>
+
+
+                    <!-- Dropdown Menüsü -->
+                    <select asp-for="unit" class="form-control">
+                        <option value="">Seçiniz</option>
+                        <option value="Yönetici">Yönetim</option>
+
+                        <option value="Muhasebe">Muhasebe</option>
+                        <option value="Satış">Satış</option>
+                        <option value="İhracat">İhracat</option>
+                        <option value="Alış">Alış Birimi</option>
+                        <option value="Bilgi İşlem">Bilgi İşlem</option>
+                        <option value="Depo">Depo</option>
+
+                    </select>
+                </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+ }

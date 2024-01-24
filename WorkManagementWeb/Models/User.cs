@@ -10,17 +10,38 @@ namespace WorkManagementWeb.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string Roles { get; set; }
+        public string unit { get; set; }
     }
-
+    public class Units 
+    {
+    
+    }
     public class Musteri
     {
-
         [Key]
         public int MusteriID { get; set; }
+
         public string MusteriAdi { get; set; }
+
         public string IletisimBilgileri { get; set; }
-        public string DigerIlgiliBilgiler { get; set; }
+
+     
+
+        // Yeni özellikler ekleyebilirsiniz
+        public string Adres { get; set; }
+
+        public string Telefon { get; set; }
+
+        public string Email { get; set; }
+
+        public DateTime DogumTarihi { get; set; }
+
+        // Sipariş geçmişi için örnek bir liste
+         
     }
+
+   
+
 
     // İş Emirleri Tablosu
     public class IsEmri
@@ -34,7 +55,7 @@ namespace WorkManagementWeb.Models
         public string Durum { get; set; } // (Yeni, Devam Ediyor, Tamamlandı)
         public DateTime OlusturmaTarihi { get; set; }
         public DateTime BitisTarihi { get; set; }
-        public string DigerIlgiliBilgiler { get; set; }
+       
     }
 
     // Görevler Tablosu
@@ -50,7 +71,7 @@ namespace WorkManagementWeb.Models
         public string Durum { get; set; } // (Başlamış, Tamamlanmış, İptal Edilmiş)
         public DateTime BaslamaTarihi { get; set; }
         public DateTime BitisTarihi { get; set; }
-        public string DigerIlgiliBilgiler { get; set; }
+      
     }
 
     // Zaman Takibi Tablosu
@@ -78,4 +99,7 @@ namespace WorkManagementWeb.Models
         public decimal BirimFiyati { get; set; }
         public decimal ToplamMaliyet { get; set; }
     }
+
+ 
+
 }

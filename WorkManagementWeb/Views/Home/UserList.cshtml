@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.User>
+
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+ 
+ <h2> @ViewBag.Per</h2>
+@if (ViewBag.Per == "Bu Sayfayı Görüntülemeye Yetkiniz Yok")
+{
+    
+}else{
+<p>
+    <a asp-action="UserAdd" class="btn btn-danger">Kullanıcı Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Roles)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model !=null){
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+          
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Roles)
+            </td>
+            <td>
+                        <a asp-action="Edit" class="btn btn-danger" asp-route-id="@item.KullaniciID">Güncelle</a> 
+                      
+                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.KullaniciID">Sil</a>
+            </td>
+        </tr>
+}
+}
+    </tbody>
+</table>
+}

@@ -1,0 +1,54 @@
+﻿@model WorkManagementWeb.Models.Gorev
+
+@{
+    ViewData["Title"] = "GorevAdd";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+<h1>GorevAdd</h1>
+
+<h4>Gorev</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GorevAdd">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            
+            <div class="form-group">
+                <label asp-for="Baslik" class="control-label"></label>
+                <input asp-for="Baslik" class="form-control" />
+                <span asp-validation-for="Baslik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Durum" class="control-label"></label>
+                <input asp-for="Durum" class="form-control" />
+                <span asp-validation-for="Durum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaslamaTarihi" class="control-label"></label>
+                <input asp-for="BaslamaTarihi" class="form-control" />
+                <span asp-validation-for="BaslamaTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BitisTarihi" class="control-label"></label>
+                <input asp-for="BitisTarihi" class="form-control" />
+                <span asp-validation-for="BitisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+ 

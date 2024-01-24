@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.Musteri>
+
+@{
+    ViewData["Title"] = "Customer";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+ 
+<h2> @ViewBag.Per</h2>
+@if (ViewBag.Per == "Bu Sayfayı Görüntülemeye Yetkiniz Yok")
+{
+    
+}else{
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MusteriAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IletisimBilgileri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarihi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model!=null){
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusteriAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IletisimBilgileri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogumTarihi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MusteriID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MusteriID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MusteriID">Delete</a>
+            </td>
+        </tr>
+}
+        }
+    </tbody>
+</table>
+}
