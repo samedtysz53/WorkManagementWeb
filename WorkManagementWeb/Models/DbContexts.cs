@@ -10,14 +10,14 @@ namespace WorkManagementWeb.Models
         }
 
 
-        public DbSet<JoblistModels> JoblistModels { get; set; }
-        public DbSet<TaskListModels> TaskListModels { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Musteri> Musteri { get; set; }
        
-        public DbSet<User> User { get; set; }
-        public DbSet<Team> Team { get; set; }
-        public DbSet<TeamJoblist> TeamJoblists { get; set; }
-        public DbSet<TeamTaskName> TeamTaskNames { get; set; }
-        public DbSet<TeamMembers> TeamMembers { get; set; }
+     
+        public DbSet<IsEmri> TIsEmrieam { get; set; }
+        public DbSet<Gorev> Gorev { get; set; }
+        public DbSet<ZamanTakibi> ZamanTakibi { get; set; }
+        public DbSet<MalzemeVeStok> MalzemeVeStok { get; set; }
 
 
 

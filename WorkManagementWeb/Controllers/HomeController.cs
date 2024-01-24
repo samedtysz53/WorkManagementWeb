@@ -39,14 +39,18 @@ namespace WorkManagementWeb.Controllers
         public IActionResult Index(User user)
         {
             //return RedirectToAction("WorkList","Main");
-            var filter = dbContexts.User.FirstOrDefault(x => x.Email == user.Email && x.Password == user.Password);
+            var filter = dbContexts.Users.FirstOrDefault(x => x.Email == user.Email && x.Password == user.Password);
             if (filter != null) 
             {
                
-                HttpContext.Session.SetString("Email",user.Email);
-                HttpContext.Session.SetString("UserCode",filter.RandomCode);
-                return RedirectToAction("SelectTeam", "Main");
+                HttpContext.Session.SetInt32("ID",user.KullaniciID);
+              
+                return RedirectToAction("Gorev", "Home");
             }
+            return View();
+        }
+        public IActionResult Gorev() 
+        {
             return View();
         }
         [HttpGet]
@@ -54,31 +58,6 @@ namespace WorkManagementWeb.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult register(User user)
-        {
-            string uniqueCode;
-            do
-            {
-                uniqueCode = GenerateRandomCode();
-            } while (IsCodeExists(uniqueCode));
-
-            user.RandomCode = "#"+uniqueCode;
-
-            dbContexts.User.Add(user);
-            dbContexts.SaveChanges();
-
-            return RedirectToAction("worklist", "Main");
-        }
-        private string GenerateRandomCode()
-        {
-            Random random = new Random();
-            int code = random.Next(0, 10000); // 1000 ile 9999 arasında random sayı üret
-            return code.ToString();
-        }
-        private bool IsCodeExists(string code)
-        {
-            return dbContexts.User.Any(u => u.RandomCode == code);
-        }
+      
     }
 }

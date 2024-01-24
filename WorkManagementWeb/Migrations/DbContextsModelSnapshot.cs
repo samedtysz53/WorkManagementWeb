@@ -22,170 +22,146 @@ namespace WorkManagementWeb.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WorkManagementWeb.Models.JoblistModels", b =>
+            modelBuilder.Entity("WorkManagementWeb.Models.Gorev", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("GorevID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GorevID"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Aciklama")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("JobListName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Time")
+                    b.Property<DateTime>("BaslamaTarihi")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("ID");
-
-                    b.ToTable("JoblistModels");
-                });
-
-            modelBuilder.Entity("WorkManagementWeb.Models.TaskListModels", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("Description")
+                    b.Property<string>("Baslik")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Done")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("EndTime")
+                    b.Property<DateTime>("BitisTarihi")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("JobListName")
+                    b.Property<int>("CalisanID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DigerIlgiliBilgiler")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TaskName")
+                    b.Property<string>("Durum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Time")
+                    b.Property<int>("IsEmriID")
+                        .HasColumnType("int");
+
+                    b.HasKey("GorevID");
+
+                    b.ToTable("Gorev");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.IsEmri", b =>
+                {
+                    b.Property<int>("IsEmriID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IsEmriID"));
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Baslik")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BitisTarihi")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("ID");
+                    b.Property<string>("DigerIlgiliBilgiler")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("TaskListModels");
-                });
+                    b.Property<string>("Durum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-            modelBuilder.Entity("WorkManagementWeb.Models.Team", b =>
-                {
-                    b.Property<int>("T_ID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("MusteriID")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_ID"));
-
-                    b.Property<string>("MemberCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeamName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("T_ID");
-
-                    b.ToTable("Team");
-                });
-
-            modelBuilder.Entity("WorkManagementWeb.Models.TeamJoblist", b =>
-                {
-                    b.Property<int>("T_JID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_JID"));
-
-                    b.Property<string>("TeamCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeamJobName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Time")
+                    b.Property<DateTime>("OlusturmaTarihi")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("T_JID");
+                    b.HasKey("IsEmriID");
 
-                    b.ToTable("TeamJoblists");
+                    b.ToTable("TIsEmrieam");
                 });
 
-            modelBuilder.Entity("WorkManagementWeb.Models.TeamMembers", b =>
+            modelBuilder.Entity("WorkManagementWeb.Models.MalzemeVeStok", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("MalzemeID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MalzemeID"));
 
-                    b.Property<string>("TeamCode")
+                    b.Property<decimal>("BirimFiyati")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("IsEmriID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MalzemeAdi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Miktar")
+                        .HasColumnType("int");
 
-                    b.HasKey("ID");
+                    b.Property<decimal>("ToplamMaliyet")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.ToTable("TeamMembers");
+                    b.HasKey("MalzemeID");
+
+                    b.ToTable("MalzemeVeStok");
                 });
 
-            modelBuilder.Entity("WorkManagementWeb.Models.TeamTaskName", b =>
+            modelBuilder.Entity("WorkManagementWeb.Models.Musteri", b =>
                 {
-                    b.Property<int>("T_TID")
+                    b.Property<int>("MusteriID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("T_TID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MusteriID"));
 
-                    b.Property<string>("Added_by")
+                    b.Property<string>("DigerIlgiliBilgiler")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Done")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("TTaskName")
+                    b.Property<string>("IletisimBilgileri")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TeamID")
-                        .HasColumnType("int");
+                    b.Property<string>("MusteriAdi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
+                    b.HasKey("MusteriID");
 
-                    b.HasKey("T_TID");
-
-                    b.ToTable("TeamTaskNames");
+                    b.ToTable("Musteri");
                 });
 
             modelBuilder.Entity("WorkManagementWeb.Models.User", b =>
                 {
-                    b.Property<int>("U_ID")
+                    b.Property<int>("KullaniciID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("U_ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KullaniciID"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -195,20 +171,45 @@ namespace WorkManagementWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RandomCode")
+                    b.Property<string>("Roles")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Time")
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("KullaniciID");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("WorkManagementWeb.Models.ZamanTakibi", b =>
+                {
+                    b.Property<int>("ZamanTakibiID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ZamanTakibiID"));
+
+                    b.Property<DateTime>("BaslangicZamani")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("BitisZamani")
+                        .HasColumnType("datetime2");
 
-                    b.HasKey("U_ID");
+                    b.Property<int>("CalisanID")
+                        .HasColumnType("int");
 
-                    b.ToTable("User");
+                    b.Property<int>("GorevID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ToplamCalismaSuresi")
+                        .HasColumnType("int");
+
+                    b.HasKey("ZamanTakibiID");
+
+                    b.ToTable("ZamanTakibi");
                 });
 #pragma warning restore 612, 618
         }

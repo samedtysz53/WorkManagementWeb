@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WorkManagementWeb.Models.Gorev>
+
+@{
+    ViewData["Title"] = "Gorev";
+    Layout = "~/Views/Template/Template.cshtml";
+}
+
+<h1>Gorev</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IsEmriID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalisanID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baslik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Durum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaslamaTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BitisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DigerIlgiliBilgiler)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+         
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsEmriID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CalisanID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Baslik)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aciklama)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Durum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BaslamaTarihi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BitisTarihi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DigerIlgiliBilgiler)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.GorevID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.GorevID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.GorevID">Delete</a>
+                    </td>
+                </tr>
+            
+        }
+    </tbody>
+</table>
