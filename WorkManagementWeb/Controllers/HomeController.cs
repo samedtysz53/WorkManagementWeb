@@ -56,18 +56,46 @@ namespace WorkManagementWeb.Controllers
         {
             ViewBag.User = HttpContext.Session.GetString("Eposta");
             ViewBag.Unit = HttpContext.Session.GetString("Unit");
-            var filter = dbContexts.Gorev.ToList();
+
+            if (CheckRole() == 0 || CheckRole() == 1)
+            {
+                var filter = dbContexts.Gorev.ToList();
+                return View(filter);
+            }
+            else
+            {
+                ViewBag.Yetki = "Personel";
+                var filter = dbContexts.Gorev.ToList();
+                return View(filter);
+            }
+
+
+
+           
           
-            //kullanıcının birimine göre veri çeksin
-            return View(filter);
+          
         }
+        [HttpGet]
         public IActionResult GorevAdd()
         {
             ViewBag.User = HttpContext.Session.GetString("Eposta");
             ViewBag.Unit = HttpContext.Session.GetString("Unit");
- 
 
+
+          
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult GorevAdd(Gorev gorev)
+        {
+            var filter = dbContexts.Users.Where(x => x.Email == HttpContext.Session.GetString("Eposta")).FirstOrDefault();
+            gorev.CalisanName = filter.Username;
+
+            dbContexts.Gorev.Add(gorev);
+            dbContexts.SaveChangesAsync();
+
+            return RedirectToAction("Gorev", "Home");
         }
 
         [HttpGet]

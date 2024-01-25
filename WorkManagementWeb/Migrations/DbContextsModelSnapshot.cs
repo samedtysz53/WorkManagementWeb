@@ -17,7 +17,7 @@ namespace WorkManagementWeb.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.14")
+                .HasAnnotation("ProductVersion", "8.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -44,10 +44,7 @@ namespace WorkManagementWeb.Migrations
                     b.Property<DateTime>("BitisTarihi")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CalisanID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DigerIlgiliBilgiler")
+                    b.Property<string>("CalisanName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -81,10 +78,6 @@ namespace WorkManagementWeb.Migrations
 
                     b.Property<DateTime>("BitisTarihi")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("DigerIlgiliBilgiler")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Durum")
                         .IsRequired()

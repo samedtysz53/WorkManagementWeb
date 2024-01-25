@@ -65,7 +65,7 @@ namespace WorkManagementWeb.Models
         [Key]
         public int GorevID { get; set; }
         public int IsEmriID { get; set; }
-        public int CalisanID { get; set; }
+        public string CalisanName { get; set; }
         public string Baslik { get; set; }
         public string Aciklama { get; set; }
         public string Durum { get; set; } // (Başlamış, Tamamlanmış, İptal Edilmiş)
