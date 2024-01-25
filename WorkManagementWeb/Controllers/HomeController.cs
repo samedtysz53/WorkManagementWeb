@@ -57,6 +57,7 @@ namespace WorkManagementWeb.Controllers
             ViewBag.User = HttpContext.Session.GetString("Eposta");
             ViewBag.Unit = HttpContext.Session.GetString("Unit");
             var filter = dbContexts.Gorev.ToList();
+          
             //kullanıcının birimine göre veri çeksin
             return View(filter);
         }
@@ -86,27 +87,41 @@ namespace WorkManagementWeb.Controllers
         }
         public IActionResult UserList() 
         {
-            if (CheckRole())
+            if (CheckRole()==0)
             {
-                var list = dbContexts.Users.ToList();
+
+               
+               var list = dbContexts.Users.ToList();
                 return View(list);
+            
+            }else if (CheckRole()==1) 
+            {
+                var filter2 = dbContexts.Users.Where(x => x.unit == HttpContext.Session.GetString("Unit")).ToList();
+                return View(filter2);
+            }
+            else if (CheckRole() == 2) 
+            {
+                ViewBag.Yetki = "Personel";
+                var filter2 = dbContexts.Users.Where(x => x.unit == HttpContext.Session.GetString("Unit")).ToList();
+                return View(filter2);
             }
             else
             {
                 ViewBag.Per = "Bu Sayfayı Görüntülemeye Yetkiniz Yok";
+                return View();
             }
-            return View();
+           
         }
         [HttpGet]
         public IActionResult UserAdd() 
         {
-            if (CheckRole())
+            if (CheckRole() == 0|| CheckRole()==1)
             {
                 return View();
             }
             else
             {
-                ViewBag.Per = "Bu Sayfayı Görüntülemeye Yetkiniz Yok";
+                ViewBag.Per = "Bu Sayfayı Görüntülemeye Yetkiniz Yok !!";
             }
             return View();
         }
@@ -133,7 +148,7 @@ namespace WorkManagementWeb.Controllers
         public IActionResult Customer()
         {
           
-            if(CheckRole())
+            if(CheckRole()==0)
             {
                 
                 return View(dbContexts.Musteri.ToList());
@@ -148,15 +163,23 @@ namespace WorkManagementWeb.Controllers
             return View();
         }
 
-        public bool CheckRole() 
+        public int CheckRole() 
         {
             var filter = dbContexts.Users.Where(x => x.Email == HttpContext.Session.GetString("Eposta")).FirstOrDefault();
-            if (filter.Roles == "Admin" || filter.Roles == "Müdür" || filter.Roles == "Yonetici")
+            if (filter.Roles == "Yonetici")
             {
 
-               return true;
+               return 0;
             }
-            return false;
+            else if (filter.Roles == "Müdür") 
+            {
+                return 1;
+            }
+            else if(filter.Roles == "Personel") 
+            {
+                return 2;
+            }
+            return 3;
         }
     }
 }
