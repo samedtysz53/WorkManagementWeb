@@ -17,67 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WorkManagementWeb
 build_property.RootNamespace = WorkManagementWeb
-build_property.ProjectDir = C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb\
+build_property.ProjectDir = C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\samed\Documents\GitHub\WorkManagement\WorkManagementWeb\WorkManagementWeb
+build_property.MSBuildProjectDirectory = C:\Users\samed\Documents\GitHub\WorkManagementWeb\WorkManagementWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/Customer.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/Customer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/Gorev.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/Gorev.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHb3Jldi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/GorevAdd.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/GorevAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHb3JldkFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/Index.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/register.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/UserAdd.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/UserAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/UserList.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Home/workorders.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Home/workorders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3b3Jrb3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Shared/Error.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Template/Template.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Template/Template.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtcGxhdGVcVGVtcGxhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/_ViewImports.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/_ViewStart.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/samed/Documents/GitHub/WorkManagement/WorkManagementWeb/WorkManagementWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/samed/Documents/GitHub/WorkManagementWeb/WorkManagementWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-pr3zxnrhx8
